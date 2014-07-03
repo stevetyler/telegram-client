@@ -2,12 +2,11 @@
     <div id="page-container">
         <section class="front-card">
             <section class="front-welcome">
-                <div class="logo">
+                {{#link-to 'telegram'}}<div class="logo">
                     <h1 class="visuallyhidden">Telegram</h1>
-                </div>      
+                </div>{{/link-to}}    
             </section>
             {{outlet}}
-
             <div class="postmark"></div> 
         </section>
     </div>
