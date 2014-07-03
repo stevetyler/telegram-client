@@ -8,6 +8,9 @@ Router.map(function() {
     this.resource('telegram', {
         path: '/'
     }, function() {
+        this.route('login', {
+            path: '/'
+        });
         this.route('createAccount', {
             path: '/create-account'
         });
