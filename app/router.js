@@ -24,16 +24,19 @@ Router.map(function() {
     this.resource('username', {
         path: '/:username'
     }, function() {
+        this.route('profile', {
+            path: '/'
+        });
         this.route('following');
-        this.route('followers');
-        this.route('posts');
+        this.route('followers'); // private
+        this.route('posts'); // private
     });
     this.route('post', {
         path: '/:username/posts/:post'
     });
 
     this.route('myStream', {
-        path: '/my-stream'
+        path: '/my-stream' // private
     });
 });
 

@@ -2,7 +2,8 @@
   "predef": {
     "document": true,
     "window": true,
-    "TelegramMainENV": true
+    "TelegramMainENV": true,
+    "$": true
   },
   "browser" : true,
   "boss" : true,
