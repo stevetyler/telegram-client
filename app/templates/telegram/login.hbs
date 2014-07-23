@@ -1,14 +1,20 @@
 <section class="front-signin">
     <h2>Get going ...</h2>    
-    <form class="signin">
+    <form class="signin" {{action "login" on="submit"}}>
+        {{#if loginFailed}}
+            <div class="alert">Invalid username or password.</div>
+        {{/if}}
+        {{#if isSlowConnection}}
+            <div class="alert alert-info">The request seems to be taking more time than usual, please wait.</div>
+        {{/if}}
         <div class="username">
-            <input type="text" id="signin-email" class="email-input" placeholder="Enter your username ...">    
+            {{input value=username type="text" placeholder="Enter your username ..."}}
         </div>
         <div class="password">
-            <input type="password" id="signin-password" class="password-input" placeholder="Enter your password ...">
+            {{input value=password type="password" id="signin-password" placeholder="Enter your password ."}}
         </div>
         <div class="login-recover-signup">
-            <button type="submit" class="submit">Log in</button>
+            <button type="submit" class="btn" {{bindAttr disabled="isProcessing"}}>Log in</button>
             <div class="recover-signup"> 
                 <a class="recover">
                     {{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}

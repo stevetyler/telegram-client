@@ -19,7 +19,7 @@ default Ember.Controller.extend({ // use ObjectController ?
             password: this.get("password")
         }).then(function() {
             this.set("isProcessing", false);
-            document.location = "/welcome";
+            document.location = "/telegram";
         }.bind(this), function() {
             this.set("isProcessing", false);
             this.set("loginFailed", true);
