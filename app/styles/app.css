@@ -67,7 +67,7 @@ body {
     font-size: 13px;
     font-size: 0.81rem;
     font-family: 'Open Sans', Lucida Sans, Helvetica, Helvetica Neue, Arial;
-    background-color: #008CB8;
+    
 }
 
 h2 {
@@ -88,15 +88,19 @@ a:hover, a:active, a:focus {
     text-decoration: underline;
 }
 
-#page-outer {
-    position: relative;
-    width: 900px;
-    height: 400px;
-    margin: 130px auto 130px auto;
+#page-outer.telegram-bg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #008CB8;
 }
 
 #page-container {
     position: relative;
+    width: 900px;
+    height: 400px;
+    margin: 130px auto 130px auto;
     background-color: white; 
 }
 
@@ -127,7 +131,21 @@ a:hover, a:active, a:focus {
     left: 110px;
     width: 240px;
     height: 80px;
-    background: url("../assets/img/telegram-logo.png") no-repeat;
+    /* background: url("../assets/img/tg-logo.png") no-repeat; */
+}
+
+.logo-sml {
+    position: relative;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 10px 0;
+    /* background: url("../assets/img/tg-logo-sml.png") no-repeat; */
+}
+
+.logo-sml img {
+    height: 100%;
+    width: 100%;
 }
 
 .postmark {
@@ -170,8 +188,10 @@ a:hover, a:active, a:focus {
     line-height: 2;
 }
 
-.login-recover-signup button {
+button {
     position: relative;
+    display: inline-block;
+
     float: left;
     border: 1px solid #0084B2;
     background-color: white;
@@ -181,16 +201,97 @@ a:hover, a:active, a:focus {
     outline: none; /* should only change with :focus warning */
 }
 
+button.follow {
+    margin: 1em;
+    float: none;
+}
+
 .recover-signup {
     position: relative;
     display: block;
     float: right;
 }
 
+#page-container.username {
+    position: relative;
+    width: 600px;
+    height: auto;
+    margin: 0 auto;
+}
 
+header {
+    position: relative;
+    height: 65px;
+    background: url("../assets/img/header-bg.png") repeat-x;
+}
 
+nav {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    border-top: 1px solid #EEEEEE;
+    border-bottom: 1px solid #EEEEEE;
+}
 
+nav ul {
+    position: relative;
+    padding: 0;
+    margin: 0 20% 0 20%;
+    float: left;
+    width: 60%;
+    height: 48px;
+    
+}
 
+nav ul li {
+    float: left;
+    font-size: 1.5em;
+    color: #0084B2;
+    padding: 0.5em 1em;
+}
+
+nav ul li:hover {
+    text-decoration: none;
+    border-bottom: 3px solid #0084B2;;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+}
+
+section.post {
+    border-bottom: 1px solid #EEEEEE;
+}
+
+section.post div {
+    float: left;
+    position: relative;
+    text-align:left; 
+}
+
+section.post div:first-child {
+    padding: 1.5em 2em; 
+    width: 40px
+} 
+
+section.post div:last-child {
+    width: 496px
+} 
+
+section.post img {
+    display:block; 
+    height: 45px; 
+    width: 45px
+}
+
+section.post ul {
+    padding: 0;
+}
+
+section.post ul li {   
+    float: left;
+    list-style-type: none;
+}
 
 
 
