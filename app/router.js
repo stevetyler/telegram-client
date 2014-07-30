@@ -22,20 +22,17 @@ Router.map(function() {
         });
     });
     this.resource('username', {
-        path: '/:username'
+        path: '/:username/posts'
     }, function() {
-        this.route('myStream', {
-            path: '/' // private
-        });
         this.route('following');
         this.route('followers'); // private
-        this.route('posts'); // private
     });
     this.route('post', {
         path: '/:username/posts/:post'
     });
-
-
+    this.route('myStream', {
+        path: '/my-stream' // private
+    });
 });
 
 export
