@@ -22,8 +22,11 @@ default Ember.ObjectController.extend({
                 isProcessing: true
             });
 
-            var user = this.store.find('user', username).then(function() {
+            var user = this.store.find('user', {
+                username: username
+            }).then(function() {
                 controller.set("isProcessing", false);
+                console.log(user);
             }.bind(controller), function() {
                 controller.set("isProcessing", false);
                 controller.set("loginFailed", true);
@@ -33,7 +36,6 @@ default Ember.ObjectController.extend({
                 // check passwords match ?
                 controller.transitionToRoute('username');
             }
-            console.log(user.password);
         }
     }
 });
