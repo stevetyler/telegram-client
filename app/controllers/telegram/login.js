@@ -3,28 +3,36 @@
 import Ember from 'ember';
 
 export
-default Ember.Controller.extend({ // use ObjectController ?
+default Ember.ObjectController.extend({
 
     loginFailed: false,
     isProcessing: false,
 
+    content: {}, // gives assertion error without. Alternatively just use Controller
+
     actions: {
+
         login: function() {
+
+            var controller = this;
+            var username = this.get('id');
+            console.log(username);
             this.setProperties({
                 loginFailed: false,
                 isProcessing: true
             });
 
-            $.post("/login", {
-                username: this.get("username"),
-                password: this.get("password")
-            }).then(function() {
-                this.set("isProcessing", false);
-                document.location = "/telegram";
-            }.bind(this), function() {
-                this.set("isProcessing", false);
-                this.set("loginFailed", true);
-            }.bind(this));
+            this.store.find('user', username).then(function() {
+                controller.set("isProcessing", false);
+
+                // check passwords match ?
+                controller.transitionToRoute('username', {
+                    path: ':id'
+                });
+            }.bind(controller), function() {
+                controller.set("isProcessing", false);
+                controller.set("loginFailed", true);
+            }.bind(controller));
         }
     }
 

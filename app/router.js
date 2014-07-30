@@ -24,8 +24,8 @@ Router.map(function() {
     this.resource('username', {
         path: '/:username'
     }, function() {
-        this.route('profile', {
-            path: '/'
+        this.route('myStream', {
+            path: '/' // private
         });
         this.route('following');
         this.route('followers'); // private
@@ -35,9 +35,7 @@ Router.map(function() {
         path: '/:username/posts/:post'
     });
 
-    this.route('myStream', {
-        path: '/my-stream' // private
-    });
+
 });
 
 export
