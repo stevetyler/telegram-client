@@ -3,12 +3,10 @@
 import Ember from 'ember';
 
 export
-default Ember.ObjectController.extend({
+default Ember.Controller.extend({ // route has no model (not displaying data) so Controller not ObjectController
 
     loginFailed: false,
     isProcessing: false,
-
-    content: {}, // gives assertion error without. Alternatively just use Controller
 
     actions: {
 
