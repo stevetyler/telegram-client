@@ -10,11 +10,23 @@ var User = DS.Model.extend({
 
 User.reopenClass({
     FIXTURES: [{
-        id: 'stevetyler_uk',
+        id: 'stevetyler',
         firstName: 'Steve',
         lastName: 'Tyler',
-        imageURL: '',
-        // followers: ['', '', '', '']
+        password: 'steve',
+        imageURL: '../assets/img/stevetyler-img.png'
+    }, {
+        id: 'vivhoford',
+        firstName: 'Vivien',
+        lastName: 'Hoford',
+        password: 'vivien',
+        imageURL: '../assets/img/vivhoford-img.png'
+    }, {
+        id: 'rachelblanton',
+        firstName: 'Rachel',
+        lastName: 'Blanton',
+        password: 'rachel',
+        imageURL: '../assets/img/rachelblanton-img.png'
     }]
 });
 

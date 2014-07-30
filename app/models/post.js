@@ -10,10 +10,23 @@ var Post = DS.Model.extend({
 Post.reopenClass({
     FIXTURES: [{
         id: 'stevetyler_uk',
-        title: '',
+        title: 'My first post',
         author: '',
         date: '',
-        body: ''
+        body: 'Ember is great!'
+    }, {
+        id: 'vivhoford',
+        title: 'My first post',
+        author: '',
+        date: '',
+        body: 'What\'s Ember?'
+
+    }, {
+        id: 'rachelblanton',
+        title: 'My first post',
+        author: '',
+        date: '',
+        body: 'I have no idea what you\'re talking about'
     }]
 });
 
