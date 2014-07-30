@@ -15,25 +15,25 @@ default Ember.ObjectController.extend({
         login: function() {
 
             var controller = this;
-            var username = this.get('id');
-            console.log(username);
+            var username = this.get('username');
+            var password = this.get('password');
             this.setProperties({
                 loginFailed: false,
                 isProcessing: true
             });
 
-            this.store.find('user', username).then(function() {
+            var user = this.store.find('user', username).then(function() {
                 controller.set("isProcessing", false);
-
-                // check passwords match ?
-                controller.transitionToRoute('username', {
-                    path: ':id'
-                });
             }.bind(controller), function() {
                 controller.set("isProcessing", false);
                 controller.set("loginFailed", true);
             }.bind(controller));
+
+            if (user.password === password) {
+                // check passwords match ?
+                controller.transitionToRoute('username');
+            }
+            console.log(user.password);
         }
     }
-
 });
