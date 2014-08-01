@@ -21,14 +21,14 @@ Router.map(function() {
             path: '/reset-success'
         });
     });
-    this.resource('username', {
-        path: '/:username/posts'
+    this.resource('id', {
+        path: '/:id/posts'
     }, function() {
         this.route('following');
         this.route('followers'); // private
     });
     this.route('post', {
-        path: '/:username/posts/:post'
+        path: '/:id/posts/:post'
     });
     this.route('myStream', {
         path: '/my-stream' // private

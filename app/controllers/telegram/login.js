@@ -3,7 +3,7 @@
 import Ember from 'ember';
 
 export
-default Ember.Controller.extend({ // route has no model (not displaying data) so Controller not ObjectController
+default Ember.Controller.extend({ // route has no model (not displaying data) so use Controller not ObjectController
 
     loginFailed: false,
     isProcessing: false,
@@ -11,7 +11,6 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
     actions: {
 
         login: function() {
-
             var controller = this;
             var username = this.get('username');
             var password = this.get('password');
@@ -23,7 +22,6 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
             this.store.find('user', username).then(function(user) {
                 controller.set("isProcessing", false);
                 if (user.get('password') === password) {
-                    // check passwords match ?
                     controller.transitionToRoute('myStream');
                 } else {
                     controller.set("loginFailed", true);

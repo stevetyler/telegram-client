@@ -1,1 +1,52 @@
-<h1>My Stream</h1>
+<header>
+	{{#link-to}}	
+    <div style="position: relative; padding: 0; line-height: 49px; height: 49px;">
+        <img src="../assets/img/home.png" style="vertical-align: middle;">
+        <h4 style="display: inline; vertical-align: middle; margin: 0">Home</h4>
+	</div>  
+	{{/link-to}}  
+	{{#link-to}}	
+    <div style="position: absolute; right:10px; top: 8px; ">
+        <img src="../assets/img/stevetyler-img.png" style="float: left; height: 35px; width: 35px">
+        <h4 style="float: right">{{id}}</h4>
+	</div>  
+	{{/link-to}}  
+</header>
+<div id="page-container" class="username" style="text-align: center; margin-top: -65px; background: none;">	
+	<section class="logo-sml" style="padding-top: 10px;">
+		{{#link-to 'telegram'}}
+		<img src="../assets/img/tg-logo-sml.png">
+        <h1 class="visuallyhidden">Telegram</h1>
+        {{/link-to}}
+   	
+	</section>
+
+	<section>
+		<form style="font-size: 1.6em; border: none; padding-top: 1em;">
+			{{textarea value=post cols='45' rows='5'}}
+		</form>
+		<button type="submit" class="submit follow">Publish</button>
+	</section>
+	<nav class="clearfix">
+		<ul>
+			<li>Latest Posts</li>
+		</ul>
+	</nav>
+	{{outlet}}
+	<section class="post clearfix">
+		<div style="" >
+			<img src="../assets/img/stevetyler-img.png">
+		</div>
+		<div class="clearfix">
+			<h3>{{id}}</h3>
+			<p>hdjahsk akjsdhakjsdh kajshdkajhsd akajshdkajhsdkajhs dkajshdka kajhsd akjsdh akjh ashjd kajh sd  dhajhsjdhakjhshd akjsh d akjshdhda s
+			</p>
+			<ul>
+				<li>2 minutes ago</li>
+				<li><span>.</span></li>
+				<li>delete</li>
+			</ul>
+		</div>
+	</section>
+</div>
+

@@ -135,11 +135,11 @@ a:hover, a:active, a:focus {
 }
 
 .logo-sml {
-    position: relative;
-    width: 100px;
-    height: 30px;
+    
+    width: 105px;
+    height: 35px;
     margin: 0 auto;
-    padding: 10px 0;
+    
     /* background: url("../assets/img/tg-logo-sml.png") no-repeat; */
 }
 
