@@ -14,3 +14,7 @@ jQuery not imported
 .jshintrc add predef '$':true
 http://stackoverflow.com/questions/24180448/import-jquery-with-ember-cli
 
+2/8/14
+
+id: DS.attr('text'),  Console Error: You may not set `id` as an attribute on your model.
+

@@ -1,0 +1,32 @@
+<section class="post clearfix">
+	<div style="">
+		<img src="../assets/img/users/stevetyler.png">
+	</div>
+	<div class="clearfix">
+		<h3>{{author}}</h3>
+		<p>Test static post
+		</p>
+		<ul>
+			<li>2 minutes ago</li>
+			<li><span>.</span></li>
+			<li>delete</li>
+		</ul>
+	</div>
+</section>
+
+{{#each item in controller}}
+<section class="post clearfix">
+	<div style="">
+		<img src="../assets/img/users/stevetyler.png">
+	</div>
+	<div class="clearfix">
+		<h3>{{author}}</h3>
+		<p>{{body}}</p>
+		<ul>
+			<li>2 minutes ago</li>
+			<li><span>.</span></li>
+			<li>delete</li>
+		</ul>
+	</div>
+</section>
+{{/each}}

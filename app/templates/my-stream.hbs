@@ -1,14 +1,14 @@
 <header>
 	{{#link-to}}	
-    <div style="position: relative; padding: 0; line-height: 49px; height: 49px;">
-        <img src="../assets/img/home.png" style="vertical-align: middle;">
-        <h4 style="display: inline; vertical-align: middle; margin: 0">Home</h4>
+    <div class="home">
+        <img src="../assets/img/home.png">
+        <h4>Home</h4>
 	</div>  
 	{{/link-to}}  
 	{{#link-to}}	
-    <div style="position: absolute; right:10px; top: 8px; ">
-        <img src="../assets/img/stevetyler-img.png" style="float: left; height: 35px; width: 35px">
-        <h4 style="float: right">{{id}}</h4>
+    <div class="user-link">
+        <img src="../assets/img/users/stevetyler.png" style="height: 35px; width: 35px">
+        <h4>{{id}}</h4>
 	</div>  
 	{{/link-to}}  
 </header>
@@ -18,27 +18,25 @@
 		<img src="../assets/img/tg-logo-sml.png">
         <h1 class="visuallyhidden">Telegram</h1>
         {{/link-to}}
-   	
-	</section>
-
+   	</section>
 	<section>
 		<form style="font-size: 1.6em; border: none; padding-top: 1em;">
-			{{textarea value=post cols='45' rows='5'}}
+			{{textarea placeholder='Create post ...' value=post cols='45' rows='5'}}
 		</form>
 		<button type="submit" class="submit follow">Publish</button>
 	</section>
-	<nav class="clearfix">
-		<ul>
+	<nav class="clearfix" style="height: 49px">
+		<ul class="center" style="float: none; display: inline-block; text-align: center; width: auto; margin: 0;">
 			<li>Latest Posts</li>
 		</ul>
 	</nav>
 	{{outlet}}
-	<section class="post clearfix">
+	<!-- <section class="post clearfix">
 		<div style="" >
-			<img src="../assets/img/stevetyler-img.png">
+			<img src="../assets/img/users/stevetyler.png">
 		</div>
 		<div class="clearfix">
-			<h3>{{id}}</h3>
+			<h3>{{author}}</h3>
 			<p>hdjahsk akjsdhakjsdh kajshdkajhsd akajshdkajhsdkajhs dkajshdka kajhsd akjsdh akjh ashjd kajh sd  dhajhsjdhakjhshd akjsh d akjshdhda s
 			</p>
 			<ul>
@@ -47,6 +45,6 @@
 				<li>delete</li>
 			</ul>
 		</div>
-	</section>
+	</section> -->
 </div>
 

@@ -47,6 +47,7 @@ fieldset {
 
 textarea {
     resize: vertical;
+
 }
 
 .browsehappy {
@@ -86,6 +87,13 @@ a:link, a:visited {
 
 a:hover, a:active, a:focus {
     text-decoration: underline;
+}
+
+textarea {
+    border-style: none; 
+    border-color: transparent; 
+    overflow: auto;   
+
 }
 
 #page-outer.telegram-bg {
@@ -158,19 +166,19 @@ a:hover, a:active, a:focus {
 }
 
 ::-webkit-input-placeholder {
-   color: black;
+    color: black;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: black;
+    color: black;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: black;
+    color: black;
 }
 
 :-ms-input-placeholder {  
-   color: black;
+    color: black;
 }
 
 .username input, .password input {
@@ -222,6 +230,26 @@ header {
     position: relative;
     height: 65px;
     background: url("../assets/img/header-bg.png") repeat-x;
+}
+
+header div {
+    position: relative; 
+    padding: 0; 
+    line-height: 49px; height: 49px;
+}
+
+header div > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin : 0;
+}
+
+header div.home {
+    float: left;
+}
+
+header div.user-link {
+    float: right;
 }
 
 nav {
