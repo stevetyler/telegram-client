@@ -3,7 +3,6 @@ import DS from 'ember-data';
 var User = DS.Model.extend({
     email: DS.attr('string'),
     author: DS.attr('string'),
-    username: DS.attr('string'),
     firstName: DS.attr('string'),
     lastName: DS.attr('boolean'),
     password: DS.attr('password'),
@@ -17,7 +16,7 @@ User.reopenClass({
         firstName: 'Steve',
         lastName: 'Tyler',
         password: 'steve',
-        imageURL: '../assets/img/users/stevetyler.png'
+        imageURL: '../public/assets/img/users/stevetyler.png'
     }, {
         id: 'vivhoford',
         firstName: 'Vivien',
