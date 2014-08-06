@@ -26,7 +26,7 @@ Post.reopenClass({
         id: 'rachelblanton',
         title: 'My first post',
         author: 'rachelblanton',
-        date: '',
+        date: 'rachelblanton',
         body: 'I have no idea what you\'re talking about'
     }]
 });

@@ -30,21 +30,38 @@
 			<li>Latest Posts</li>
 		</ul>
 	</nav>
-	{{outlet}}
-	<!-- <section class="post clearfix">
-		<div style="" >
+	<section class="post clearfix">
+	<div style="">
+		<img src="../assets/img/users/stevetyler.png">
+	</div>
+	<div class="clearfix">
+		<h3>{{author}}</h3>
+		<p>Test static post
+		</p>
+		<ul>
+			<li>2 minutes ago</li>
+			<li><span>.</span></li>
+			<li>delete</li>
+		</ul>
+	</div>
+	</section>
+
+	{{#each post in controller}}
+	<section class="post clearfix">
+		<div style="">
 			<img src="../assets/img/users/stevetyler.png">
 		</div>
 		<div class="clearfix">
-			<h3>{{author}}</h3>
-			<p>hdjahsk akjsdhakjsdh kajshdkajhsd akajshdkajhsdkajhs dkajshdka kajhsd akjsdh akjh ashjd kajh sd  dhajhsjdhakjhshd akjsh d akjshdhda s
-			</p>
+			<h3>{{post.author}}</h3>
+			<p>{{post.body}}</p>
 			<ul>
 				<li>2 minutes ago</li>
 				<li><span>.</span></li>
 				<li>delete</li>
 			</ul>
 		</div>
-	</section> -->
+	</section>
+	{{/each}}
+
 </div>
 
