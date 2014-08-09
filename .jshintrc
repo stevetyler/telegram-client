@@ -3,7 +3,8 @@
     "document": true,
     "window": true,
     "-Promise": true,
-    "TelegramMainENV": true
+    "TelegramMainENV": true,
+    "moment": true
   },
   "browser" : true,
   "boss" : true,
