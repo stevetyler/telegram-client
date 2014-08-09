@@ -1,18 +1,18 @@
 <header>
-	{{#link-to 'telegram'}}	
+	{{#link-to 'telegram'}}
     <div class="home">
         <img src="../assets/img/home.png">
         <h4>Home</h4>
-	</div>  
-	{{/link-to}}  
+	</div>
+	{{/link-to}}
     {{#link-to 'user.posts' session.user}}
     <div class="user-link">
         <img {{bind-attr src=session.user.imageURL}} style="height: 35px; width: 35px">
         <h4>{{session.user.name}}</h4>
-	</div>  
-	{{/link-to}}  
+	</div>
+	{{/link-to}}
 </header>
-<div id="page-container" class="username" style="text-align: center; margin-top: -65px; background: none;">	
+<div id="page-container" class="username" style="text-align: center; margin-top: -65px; background: none;">
 	<section class="logo-sml" style="padding-top: 10px;">
 		<img src="../assets/img/tg-logo-sml.png">
         <h1 class="visuallyhidden">Telegram</h1>
@@ -23,7 +23,7 @@
 			<div class="vcenter clearfix" style="line-height: 2em;">
                 <span style="display: inline-block; float: left; font-size: 0.75em; padding-left: 24px; vertical-align: middle;" {{bind-attr class="charLimit"}}>{{controller.characters}} characters</span>
             	<button type="submit" class="follow" style="float: right; font-size: 0.65em; display: inline-block; vertical-align: middle; margin: 8px 0; margin-right: 24px;">Publish</button>
-        	</div>  
+        	</div>
 		</form>
 	</section>
 	<nav class="clearfix" style="height: 49px">
@@ -34,8 +34,8 @@
 
 	{{#each post in controller}}
 
-	{{my-stream-post}}
-	<!-- <section class="post clearfix">
+	<!-- {{my-stream-post}} -->
+	<section class="post clearfix">
 		<div style="">
 			{{#link-to 'user.posts' post.user}}<img {{bind-attr src=post.user.imageURL}} alt="User image">{{/link-to}}
 		</div>
@@ -43,12 +43,12 @@
 			{{#link-to 'user.posts' post.user}}<h3>{{post.user.id}}</h3>{{/link-to}}
 			<p>{{post.body}}</p>
 			<ul>
-				<li>{{time}}{{post.createdDate}}</li>
+				<li>{{post.displayDate}}</li>
 				<li><span>.</span></li>
 				<li {{action 'delete' post}}><a>delete</a></li>
 			</ul>
 		</div>
-	</section> -->
+	</section>
 	{{/each}}
 
 </div>
