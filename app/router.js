@@ -34,6 +34,9 @@ Router.map(function() {
     this.route('myStream', {
         path: '/my-stream' // private
     });
+    // this.route('welcome', {
+    //     path: '/'
+    // });
 });
 
 export
