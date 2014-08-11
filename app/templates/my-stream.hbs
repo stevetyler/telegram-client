@@ -8,7 +8,7 @@
 	{{#link-to}}	
     <div class="user-link">
         <img src="../assets/img/users/stevetyler.png" style="height: 35px; width: 35px">
-        <h4>{{id}}</h4>
+        <h4>{{session.user.firstName}}</h4>
 	</div>  
 	{{/link-to}}  
 </header>
@@ -34,10 +34,10 @@
 	{{#each post in controller}}
 	<section class="post clearfix">
 		<div style="">
-			<img {{bind-attr src=user.imageURL}}>
+			<img {{bind-attr src=post.user.imageURL}} alt="User image">
 		</div>
 		<div class="clearfix">
-			<h3>{{post.author}}</h3>
+			<h3>{{post.user.id}}</h3>
 			<p>{{post.body}}</p>
 			<ul>
 				<li>2 minutes ago</li>
