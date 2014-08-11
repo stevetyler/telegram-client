@@ -10,6 +10,6 @@ default Ember.Route.extend({
 		console.log('We can set the currently authenticated user on the session object, so that we can access it from all the ther routes and controllers.');
 		this.get('session').set('user', model);
 		controller.set('model', model);
-		console.log(this.get('user'));
+		console.log(this.get('session.user.firstName'));
 	}
 });

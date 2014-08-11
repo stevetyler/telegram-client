@@ -9,7 +9,6 @@ export default {
 				return this.get('user') !=null;
 			}.property('user')		
 		});
-
 		// http://emberjs.com/api/classes/Ember.Application.html#method_register
 		app.register('session:main', Session);
 		// http://emberjs.com/api/classes/Ember.Application.html#method_inject

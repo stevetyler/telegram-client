@@ -22,11 +22,13 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
             this.store.find('user', username).then(function(user) {
                 controller.set("isProcessing", false);
                 if (user.get('password') === password) {
+                    controller.get('session').set('user', user);
                     controller.transitionToRoute('myStream');
                 } else {
                     controller.set("loginFailed", true);
                 }
             });
+           
         }
     }
 });
