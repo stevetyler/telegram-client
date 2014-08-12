@@ -2,21 +2,17 @@
     <h2>Create your account</h2>    
     <form class="signin" {{action "create" on="submit"}}>
         <div class="username">
-            <input type="text" id="signin-email" class="email-input" placeholder="Enter your name ...">    
+            {{input value=firstName type="text" placeholder="Enter your name ..."}}
         </div>
         <div class="username">
-            <input type="text" id="signin-email" class="email-input" placeholder="Enter your username ...">    
+            {{input value=id type="text" placeholder="Enter your username ..."}} 
         </div>
         <div class="password">
-            <!-- create Ember helper
-            http://emberjs.com/guides/templates/input-helpers/
-            http://emberjs.com/guides/templates/links/
-            -->
-            <input type="password" id="signin-password" class="password-input" placeholder="Enter your password ...">
+            {{input value=password type="password" placeholder="Enter your password ..."}}
         </div>
         <div class="login-recover-signup">
-            <button type="submit" class="submit">Sign up</button>
-            <div class="recover-signup">                                
+            <button type="submit" class="btn" {{bindAttr disabled="isProcessing"}}>Log in</button>
+            <div class="recover-signup"> 
                 <a href="" class="signup">Log in</a>
             </div>
         </div>                            

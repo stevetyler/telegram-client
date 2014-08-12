@@ -20,7 +20,7 @@
         {{/link-to}}
    	</section>
 	<section>
-		<form style="font-size: 1.6em; border: none; padding-top: 1em;">
+		<form style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "createPost" on="submit"}}>
 			{{textarea placeholder='Create post ...' value=post cols='45' rows='5'}}
 		</form>
 		<button type="submit" class="submit follow">Publish</button>
