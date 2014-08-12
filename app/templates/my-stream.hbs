@@ -20,10 +20,10 @@
         {{/link-to}}
    	</section>
 	<section>
-		<form style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "createPost" on="submit"}}>
+		<form style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "publish" on="submit"}}>
 			{{textarea placeholder='Create post ...' value=post cols='45' rows='5'}}
+			<button type="submit" class="follow" style="font-size: 0.65em;">Publish</button>	
 		</form>
-		<button type="submit" class="submit follow">Publish</button>
 	</section>
 	<nav class="clearfix" style="height: 49px">
 		<ul class="center" style="float: none; display: inline-block; text-align: center; width: auto; margin: 0;">

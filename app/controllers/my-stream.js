@@ -4,10 +4,10 @@ export
 default Ember.ArrayController.extend({
 
     actions: {
-    	createPost: function() {
-    		var controller = this;
-    		var post = this.get('post');
-    		console.log(post);
+	publish: function() {
+		var controller = this;
+		var publish = this.get('post');
+		console.log(publish);
     	}
     }
 });
