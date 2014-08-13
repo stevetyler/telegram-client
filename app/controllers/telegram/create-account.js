@@ -10,16 +10,19 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
 
         create: function() {
             var controller = this;
+            var name = this.get('name');
             var username = this.get('username');
             var password = this.get('password');
 
-            this.store.createRecord('user').then(function(user) {
-                controller.set('username', username);
-                controller.set('password', password);
-                controller.set("isProcessing", false);
-                controller.get('session').set('user', user);
-                controller.transitionToRoute('myStream');
+            var newUser = this.store.createRecord('user', {
+                name: name,
+                username: username,
+                password: password
             });
+            // controller.set("isProcessing", false);
+            newUser.save();
+            controller.get('session').set('user');
+            controller.transitionToRoute('myStream');
         }
     }
 });
