@@ -7,8 +7,8 @@
 	{{/link-to}}  
 	{{#link-to}}	
     <div class="user-link">
-        <img src="../assets/img/users/stevetyler.png" style="height: 35px; width: 35px">
-        <h4>{{session.user.firstName}}</h4>
+        <img {{bind-attr src=session.user.imageURL}} style="height: 35px; width: 35px">
+        <h4>{{session.user.name}}</h4>
 	</div>  
 	{{/link-to}}  
 </header>
