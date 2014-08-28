@@ -3,8 +3,7 @@ http://emberjs.com/guides/templates/input-helpers/
 http://emberjs.com/guides/templates/links/
 http://blog.sensible.io/2013/05/23/how-to-write-a-login-form.html
 
-I found a couple of problems here
-first of all
+I found a couple of problems here first of all
 you should not use variables from the exterior
 so you cannot use the 'users' array in the controller
 because the global users symbols can be modified by other functions in other parts of your program
@@ -18,30 +17,13 @@ the dependency should be users.@each.birthdate instead of user.@each.birthdate
 
 
 http://emberjs.com/api/classes/Ember.Controller.html#method_transitionToRoute
-Andrei • Mon 22:23
-You were in a video call with Andrei
+
 http://emberjs.com/guides/models/finding-records/#toc_finding-a-single-record
-Andrei • Tue 22:10
-You were in a video call with Andrei
-Andrei SoareTue 22:15
-Andrei Soare
-hey
-Andrei • 20:55
 
 also I noticed you haven't changed the controller type
-Andrei • 16 mins
-yeah
-16 mins
-Steve Tyler
-Andrei Soare
 and deleted the content property
-Andrei • 16 mins
 I thought it should be ObjectController?
-15 mins
-Steve Tyler
-Andrei Soare
 does your route have a model?
-Andrei • 15 mins
 oh
 no it doesn't
 is that the mystream route or login route?
@@ -51,49 +33,18 @@ so the login route has no model, then the controller should not be objectcontrol
 ok, so it doesn't work because
 Andrei • 12 mins
 sorry so should the login route have a model then?
-11 mins
-Steve Tyler
-Andrei Soare
 your application doesn't have an adapter configured
 if you check your javascript console
-Andrei • 11 mins
-oh right
-11 mins
-Steve Tyler
-Andrei Soare
 it's trying to make a query to a remote server
 so you haven't configured the fixtureadapter
-Andrei • 11 mins
-so I need to do that then?
-yes I do
-10 mins
-Steve Tyler
-Andrei Soare
-yes
-Andrei • 9 mins
+
 and then a model for the route?
-9 mins
-Steve Tyler
-Andrei Soare
 why do you need a model for the route?
-Andrei • 8 mins
 if you use the fixture adapter then you don't need one?
-7 mins
-Steve Tyler
-Andrei Soare
 it has nothing to do with what adapter you use. the route has a model only if it needs to fetch some data to display on the screen
 on the login page theres no data to display so you don't need a model
-Andrei • 6 mins
-oh thanks I get that now. You're still fetching data for the username and password though, which is where I was getting confused
-4 mins
-Steve Tyler
-Andrei Soare
-yeah but you do that in the action, where you need it
-Andrei • 4 mins
-ok cool thanks.
-3 mins
-Steve Tyler
-Andrei Soare
 
-Send a message...History is off
-Andrei Soare says hi
+oh thanks I get that now. You're still fetching data for the username and password though, which is where I was getting confused
+yeah but you do that in the action, where you need it
+
+
