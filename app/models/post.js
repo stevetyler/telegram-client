@@ -5,29 +5,26 @@ var Post = DS.Model.extend({
     title: DS.attr('string'),
     user: DS.belongsTo('user'), // ?
     date: DS.attr('date'),
-    body: DS.attr('string')
+    body: DS.attr('string'),
 });
 
 Post.reopenClass({
     FIXTURES: [{
         id: 'id1',
-        title: 'My first post',
         user: 'stevetyler',
         date: '',
-        body: 'Ember is great!'
+        body: 'Ember is great!',
     }, {
         id: 'id2',
-        title: 'My first post',
         user: 'vivhoford',
         date: '',
-        body: 'What\'s Ember?'
+        body: 'What\'s Ember?',
 
     }, {
         id: 'id3',
-        title: 'My first post',
         user: 'rachelblanton',
         date: '',
-        body: 'I have no idea what you\'re talking about'
+        body: 'I have no idea what you\'re talking about',
     }]
 });
 

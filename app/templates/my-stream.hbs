@@ -21,7 +21,7 @@
    	</section>
 	<section>
 		<form style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "publish" on="submit"}}>
-			{{textarea placeholder='Create post ...' value=post cols='45' rows='5'}}
+			{{textarea placeholder='Create post ...' value=newPost cols='45' rows='5'}}
 			<button type="submit" class="follow" style="font-size: 0.65em;">Publish</button>	
 		</form>
 	</section>
@@ -40,9 +40,9 @@
 			<h3>{{post.user.id}}</h3>
 			<p>{{post.body}}</p>
 			<ul>
-				<li>2 minutes ago</li>
+				<li>{{date}} ago</li>
 				<li><span>.</span></li>
-				<li>delete</li>
+				<li><a {{action 'delete' post}} >delete</a></li>
 			</ul>
 		</div>
 	</section>

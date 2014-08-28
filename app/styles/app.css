@@ -147,7 +147,6 @@ textarea {
     width: 105px;
     height: 35px;
     margin: 0 auto;
-    
     /* background: url("../assets/img/tg-logo-sml.png") no-repeat; */
 }
 
@@ -327,9 +326,6 @@ section.post ul li span {
 }
 
 
-
-
-
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -342,7 +338,6 @@ section.post ul li span {
        (-o-min-device-pixel-ratio: 5/4),
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 120dpi) {
-
 }
 
 /* ==========================================================================
