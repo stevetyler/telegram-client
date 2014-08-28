@@ -6,24 +6,27 @@ var Post = DS.Model.extend({
     user: DS.belongsTo('user'), // ?
     date: DS.attr('date'),
     body: DS.attr('string'),
+    elapsedTime: function() {
+            
+        }.property('date')
 });
 
 Post.reopenClass({
     FIXTURES: [{
         id: 'id1',
         user: 'stevetyler',
-        date: '',
+        date: '1411516800000',
         body: 'Ember is great!',
     }, {
         id: 'id2',
         user: 'vivhoford',
-        date: '',
+        date: '1411603200000',
         body: 'What\'s Ember?',
 
     }, {
         id: 'id3',
         user: 'rachelblanton',
-        date: '',
+        date: '1411689600000',
         body: 'I have no idea what you\'re talking about',
     }]
 });
