@@ -40,7 +40,7 @@
 			<h3>{{post.user.id}}</h3>
 			<p>{{post.body}}</p>
 			<ul>
-				<li>{{date}} ago</li>
+				<li>{{post.elapsedTime}} mins ago</li>
 				<li><span>.</span></li>
 				<li {{action 'delete' post}}><a>delete</a></li>
 			</ul>

@@ -7,11 +7,11 @@ default Ember.ArrayController.extend({
 		publish: function() {
 			// var controller = this;
 			var publish = this.get('newPost');
-			var date = Date.now();
+			var date = Date.now(); 
 			var newPost = this.store.createRecord('post', {
 				body: publish,
 				user: this.get('session.user'),
-				date: this.set('date', date) // Sets date for all posts ???
+				createdDate: date 
 			});
 			newPost.save();
 			this.set('newPost', null);
