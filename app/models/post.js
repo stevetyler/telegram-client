@@ -9,9 +9,9 @@ var Post = DS.Model.extend({
     elapsedTime: function() {
         var now = Date.now(),
             createdDate = this.get('createdDate');
-        if (now - createdDate){    
-            return Math.floor((now - createdDate) / 60000);
-        }
+         
+        return Date(createdDate);
+        
         }.property('createdDate')
 });
 
