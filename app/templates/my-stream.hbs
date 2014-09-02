@@ -1,5 +1,5 @@
 <header>
-	{{#link-to}}	
+	{{#link-to 'telegram'}}	
     <div class="home">
         <img src="../assets/img/home.png">
         <h4>Home</h4>
@@ -7,7 +7,7 @@
 	{{/link-to}}  
 	{{#link-to}}	
     <div class="user-link">
-        {{#link-to user.posts}}<img {{bind-attr src=session.user.imageURL}} style="height: 35px; width: 35px">{{/link-to}}
+        <img {{bind-attr src=session.user.imageURL}} style="height: 35px; width: 35px">
         <h4>{{session.user.name}}</h4>
 
 	</div>  
@@ -15,15 +15,20 @@
 </header>
 <div id="page-container" class="username" style="text-align: center; margin-top: -65px; background: none;">	
 	<section class="logo-sml" style="padding-top: 10px;">
-		{{#link-to 'telegram'}}
 		<img src="../assets/img/tg-logo-sml.png">
         <h1 class="visuallyhidden">Telegram</h1>
-        {{/link-to}}
    	</section>
 	<section>
-		<form style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "publish" on="submit"}}>
+		<form class="clearfix "style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "publish" on="submit"}}>
 			{{textarea placeholder='Create post ...' value=newPost cols='45' rows='5'}}
-			<button type="submit" class="follow" style="font-size: 0.65em;">Publish</button>	
+			<div class="vcenter clearfix" style="line-height: 2em;">
+            	
+            
+	                <span style="display: inline-block; float: left; font-size: 0.75em; padding-left: 24px; vertical-align: middle;">140 characters</span>
+            
+            	<button type="submit" class="follow" style="float: right; font-size: 0.65em; display: inline-block; vertical-align: middle; margin: 8px 0; margin-right: 24px;">Publish</button>
+        	</div>  
+	
 		</form>
 	</section>
 	<nav class="clearfix" style="height: 49px">
