@@ -188,7 +188,7 @@ textarea {
     margin: 5px 0;
 }
 
-.login-recover-signup {
+.vcenter {
     display: inline-block;
     width: 100%;
     margin: 20px 0 20px;
@@ -196,7 +196,7 @@ textarea {
 }
 
 button {
-    position: relative;
+    /*position: relative; */
     display: inline-block;
     float: left;
     border: 1px solid #0084B2;
@@ -211,6 +211,7 @@ button.follow {
     margin: 1em;
     float: none;
 }
+
 
 .recover-signup {
     position: relative;
