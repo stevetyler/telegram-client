@@ -234,7 +234,7 @@ header {
 
 header div {
     position: relative; 
-    padding: 0; 
+    padding: 0 24px; 
     line-height: 49px; height: 49px;
 }
 
@@ -250,6 +250,10 @@ header div.home {
 
 header div.user-link {
     float: right;
+}
+
+header h4 {
+    padding-left: 8px;
 }
 
 nav {
