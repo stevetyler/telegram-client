@@ -294,6 +294,11 @@ section.post {
     border-bottom: 1px solid #EEEEEE;
 }
 
+
+.char-limit {
+    color: red;
+}
+
 section.post div {
     float: left;
     position: relative;
