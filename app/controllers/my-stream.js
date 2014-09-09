@@ -6,16 +6,16 @@ default Ember.ArrayController.extend({
 
 	charLimit: false,
 	
-	actions: {
-		
-		showCharacters: function(txt) {
-			
+	actions: {		
+		showCharacters: function(txt) {			
 			var text = 150 - txt;
 			this.set('characters', text);
 			if (text < 0) {
 				this.set('charLimit', true);
 			}
-			else this.set('charLimit', false);
+			else {
+				this.set('charLimit', false);
+			}
 		},
 
 		publish: function() {
@@ -23,7 +23,7 @@ default Ember.ArrayController.extend({
 			var publish = this.get('newPost');
 			var date = new Date(); 
 			var limit = this.get('charLimit');
-			if (!limit) {
+			if (publish && !limit) {
 				var newPost = this.store.createRecord('post', {
 					body: publish,
 					user: this.get('session.user'),
@@ -33,9 +33,7 @@ default Ember.ArrayController.extend({
 				this.set('newPost', null);
 				this.set('characters', 150);
 				this.set('charLimit', false);
-			};
-			// console.log(publish.length);
-			
+			}
 		},
 		
 		// Action has access to post parameter ie post in controller

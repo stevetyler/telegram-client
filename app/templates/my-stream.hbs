@@ -20,7 +20,7 @@
    	</section>
 	<section>
 		<form class="clearfix "style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "publish" on="submit"}}{{action "showCharacters" on="keyUp"}}>
-			{{textarea placeholder='Create post ...' value=newPost cols='45' rows='5'}}
+			{{textarea placeholder='Create post ...' value=newPost cols='45' rows='4'}}
 			<div class="vcenter clearfix" style="line-height: 2em;">
                 <span style="display: inline-block; float: left; font-size: 0.75em; padding-left: 24px; vertical-align: middle;" {{bind-attr class="charLimit"}}>{{controller.characters}} characters</span>
             	<button type="submit" class="follow" style="float: right; font-size: 0.65em; display: inline-block; vertical-align: middle; margin: 8px 0; margin-right: 24px;">Publish</button>
