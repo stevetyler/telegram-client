@@ -2,21 +2,17 @@ import Ember from 'ember';
 
 export
 default Ember.ArrayController.extend({
-	characters: 150,
+	newPost: '',
 
-	charLimit: false,
+	characters: function() {
+        	return 150 - this.get('newPost').length;
+        }.property('newPost'),
+
+	charLimit: function() {
+        	return this.get('characters') < 0;
+        }.property('characters'),
 	
 	actions: {		
-		showCharacters: function(txt) {			
-			var text = 150 - txt;
-			this.set('characters', text);
-			if (text < 0) {
-				this.set('charLimit', true);
-			}
-			else {
-				this.set('charLimit', false);
-			}
-		},
 
 		publish: function() {
 			// var controller = this;
@@ -31,11 +27,10 @@ default Ember.ArrayController.extend({
 				});
 				newPost.save();
 				this.set('newPost', null);
-				this.set('characters', 150);
+				this.set('characters', 140);
 				this.set('charLimit', false);
 			}
 		},
-		
 		// Action has access to post parameter ie post in controller
 		delete: function(post) {
 			post.deleteRecord();

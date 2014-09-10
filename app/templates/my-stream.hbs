@@ -19,7 +19,7 @@
         <h1 class="visuallyhidden">Telegram</h1>
    	</section>
 	<section>
-		<form class="clearfix "style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "publish" on="submit"}}{{action "showCharacters" on="keyUp"}}>
+		<form class="clearfix "style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "publish" on="submit"}}>
 			{{textarea placeholder='Create post ...' value=newPost cols='45' rows='4'}}
 			<div class="vcenter clearfix" style="line-height: 2em;">
                 <span style="display: inline-block; float: left; font-size: 0.75em; padding-left: 24px; vertical-align: middle;" {{bind-attr class="charLimit"}}>{{controller.characters}} characters</span>
