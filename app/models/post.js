@@ -19,18 +19,18 @@ Post.reopenClass({
     FIXTURES: [{
         id: 'id1',
         user: 'stevetyler',
-        createdDate: '1408924800000',
+        createdDate: new Date(2014, 10, 5),
         body: 'Ember is great!',
     }, {
         id: 'id2',
         user: 'vivhoford',
-        createdDate: '1409011200000',
+        createdDate: new Date(2014, 10, 6),
         body: 'What\'s Ember?',
 
     }, {
         id: 'id3',
         user: 'rachelblanton',
-        createdDate: '1409097600000',
+        createdDate: new Date(2014, 10, 8),
         body: 'I have no idea what you\'re talking about',
     }]
 });
