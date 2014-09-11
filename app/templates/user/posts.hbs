@@ -1,11 +1,6 @@
-<header>
-	<div class="logo-sml">
-		{{#link-to 'telegram'}}
-		<img src="../assets/img/tg-logo-sml.png")>
-        <h1 class="visuallyhidden">Telegram</h1>
-        {{/link-to}}
-    </div>
-</header>
+{{partial "header"}}
+
+
 <div id="page-container" class="username" style="text-align: center;">
 	<section>
 		<div>
@@ -20,16 +15,9 @@
 	<section>
 		<button type="submit" class="submit follow">Follow</button>
 	</section>
-	<nav class="clearfix">
-		<ul>
-			<li>{{#link-to}}Posts{{/link-to}}</li>
-			<li>{{#link-to}}Following{{/link-to}}</li>
-			<li>{{#link-to}}Followers{{/link-to}}</li>
-		</ul>
-	</nav>
+	{{partial "nav"}}
+	
 	{{outlet}}
-	
-	
 </div>
 
 
