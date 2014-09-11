@@ -5,11 +5,11 @@ default Ember.ArrayController.extend({
 	newPost: '',
 
 	characters: function() {
-        	return 150 - this.get('newPost').length;
-        }.property('newPost'),
+    		return 140 - this.get('newPost').length;
+		}.property('newPost'),
 
 	charLimit: function() {
-        	return this.get('characters') < 0;
+    		return this.get('characters') < 0;
         }.property('characters'),
 	
 	actions: {		
