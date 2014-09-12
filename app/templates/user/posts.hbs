@@ -1,6 +1,5 @@
 {{partial "header"}}
 
-
 <div id="page-container" class="username" style="text-align: center;">
 	<section>
 		<div>
@@ -17,8 +16,25 @@
 	</section>
 	{{partial "nav"}}
 	
+	{{posts-post}}
+
+
 	{{outlet}}
 </div>
 
 
 
+<!-- <section class="post clearfix">
+		<div style="">
+		{{#link-to 'user.posts' post.user}}<img {{bind-attr src=post.user.imageURL}} alt="User image">{{/link-to}}
+	</div>
+	<div class="clearfix">
+		{{#link-to 'user.posts' post.user}}<h3>{{post.user.id}}</h3>{{/link-to}}
+		<p>{{post.body}}</p>
+		<ul>
+			<li>{{time}}{{post.createdDate}}</li>
+			<li><span>.</span></li>
+			<li {{action 'delete' post}}><a>delete</a></li>
+		</ul>
+	</div>
+</section> -->
