@@ -308,7 +308,7 @@ section.post div {
 section.post div:first-child {
     padding: 1.5em 2em; 
     width: 40px
-} 
+}
 
 section.post div:last-child {
     width: 496px
@@ -337,6 +337,7 @@ section.post ul li span {
 
 section.post p {
     word-wrap: break-word;
+    padding-right: 40px;
 }
 
 
