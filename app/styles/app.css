@@ -191,7 +191,7 @@ textarea {
 .vcenter {
     display: inline-block;
     width: 100%;
-    margin: 20px 0 20px;
+    margin: 8px 0 8px;
     line-height: 2;
 }
 
@@ -333,6 +333,10 @@ section.post ul li {
 section.post ul li span { 
     display: block;
     margin-top: -3px;
+}
+
+section.post p {
+    word-wrap: break-word;
 }
 
 
