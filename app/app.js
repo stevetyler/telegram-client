@@ -5,11 +5,10 @@ import loadInitializers from 'ember/load-initializers';
 Ember.MODEL_FACTORY_INJECTIONS = true;
 
 var App = Ember.Application.extend({
-    modulePrefix: 'telegram-main',
-    Resolver: Resolver
+  modulePrefix: 'telegram-main', // TODO: loaded via config
+  Resolver: Resolver
 });
 
 loadInitializers(App, 'telegram-main');
 
-export
-default App;
+export default App;

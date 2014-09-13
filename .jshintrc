@@ -2,8 +2,8 @@
   "predef": {
     "document": true,
     "window": true,
-    "TelegramMainENV": true,
-    "$": true
+    "-Promise": true,
+    "TelegramMainENV": true
   },
   "browser" : true,
   "boss" : true,
@@ -29,6 +29,5 @@
   "white": false,
   "eqnull": true,
   "esnext": true,
-  "unused": true,
-  "moment": true,
+  "unused": true
 }
