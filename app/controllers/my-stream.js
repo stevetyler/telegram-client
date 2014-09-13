@@ -2,7 +2,11 @@ import Ember from 'ember';
 
 export
 default Ember.ArrayController.extend({
+	authenticatedUser : false,
+
 	newPost: '',
+
+	time: moment().format("MMM Do YYYY"),
 
 	characters: function() {
     		return 140 - this.get('newPost').length;
