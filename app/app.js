@@ -6,7 +6,8 @@ Ember.MODEL_FACTORY_INJECTIONS = true;
 
 var App = Ember.Application.extend({
   modulePrefix: 'telegram-main', // TODO: loaded via config
-  Resolver: Resolver
+  Resolver: Resolver,
+  LOG_VIEW_LOOKUPS: true
 });
 
 loadInitializers(App, 'telegram-main');
