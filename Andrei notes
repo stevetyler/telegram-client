@@ -60,7 +60,7 @@ post template - handlebars not applying margin on p?
 
 2.	You should not be able to delete posts of other users than yourself, nor should you see the delete button on their posts. Define delete component
 
-3.	Format the timestamps of each post properly. Use moment.js
+3.	Format the timestamps of each post properly. Use moment.js Done
 
 4.	When I go to URL / and I am logged in, redirect me to my stream.
 
