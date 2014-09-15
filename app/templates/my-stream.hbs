@@ -34,8 +34,11 @@
 
 	{{#each post in controller}}
 
-	<!-- {{my-stream-post}} -->
-	<section class="post clearfix">
+    {{render "post" post}}
+
+    <!-- {{my-stream-post date=post.displayDate body=post.body}} -->
+
+	<!-- <section class="post clearfix">
 		<div style="">
 			{{#link-to 'user.posts' post.user}}<img {{bind-attr src=post.user.imageURL}} alt="User image">{{/link-to}}
 		</div>
@@ -48,7 +51,7 @@
 				<li {{action 'delete' post}}><a>delete</a></li>
 			</ul>
 		</div>
-	</section>
+	</section> -->
 	{{/each}}
 
 </div>
