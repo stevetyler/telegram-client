@@ -1,2 +1,0 @@
-<li><span>.</span></li>
-<li {{action 'delete' post}}><a>delete</a></li>

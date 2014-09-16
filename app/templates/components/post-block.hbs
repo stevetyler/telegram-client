@@ -6,10 +6,14 @@
       {{#link-to 'user.posts' post.user}}<h3>{{post.user.id}}</h3>{{/link-to}}
 
       <p>{{post.body}}</p>
+
+
       <ul>
         <li>{{post.displayDate}}</li>
+        {{#if authenticatedUser}}
         <li><span>.</span></li>
         <li {{action 'delete' post}}><a>delete</a></li>
+        {{/if}}
       </ul>
     </div>
   </section>
