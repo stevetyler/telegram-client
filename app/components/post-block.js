@@ -4,23 +4,13 @@ export
 default Ember.Component.extend({
 	// isAuthenticated : false,
 
-  authenticatedUser : function(authUser) {
-    var user = this.get('post.user');
+  belongsToAuthenticatedUser : function() {
 
-    if (user === authUser) {
-        // this.set('isAuthenticated', true);
-        return true;
-    }
-    else {
-        // this.set('isAuthenticated', false);
-        // console.log(user);
-        return false;
-    }
+    return this.get('post.user') === this.get('authenticatedUser')
 
-  }.property('authenticatedUser'),
+  }.property('authenticatedUser', 'post.user'),
 
-	actions: {
-
+  actions: {
 		// Action has access to post parameter ie post in controller
 		delete: function(post) {
 			post.deleteRecord();

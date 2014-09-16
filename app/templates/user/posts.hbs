@@ -1,12 +1,29 @@
-{{partial "header"}}
+<header>
+  {{#link-to 'telegram'}}
+    <div class="home">
+        <img src="../assets/img/home.png">
+        <h4>Home</h4>
+  </div>
+  {{/link-to}}
+    {{#link-to 'user.posts' user}}
+    <div class="user-link">
+        <img {{bind-attr src=user.imageURL}} style="height: 35px; width: 35px">
+        <h4>{{session.user.name}}</h4>
+  </div>
+  {{/link-to}}
+</header>
 
-<div id="page-container" class="username" style="text-align: center;">
-	<section>
+<div id="page-container" class="username" style="text-align: center; margin-top: -65px; background: none;">
+	<section class="logo-sml" style="padding-top: 10px;">
+    <img src="../assets/img/tg-logo-sml.png">
+    <h1 class="visuallyhidden">Telegram</h1>
+  </section>
+  <section>
 		<div>
 			<img {{bind-attr src=imageURL}} alt="User image" style="height: 70px; width: 70px">
 			<!-- <img src="../assets/img/users/stevetyler.png" style="height: 70px; width: 70px"> -->
 		</div>
-		
+
 	</section>
 	<section>
 		<h3>{{id}}</h3>
@@ -15,13 +32,15 @@
 		<button type="submit" class="submit follow">Follow</button>
 	</section>
 	{{partial "nav"}}
-	
-	
 
 
 	{{outlet}}
 
-	{{posts-post}}
+  {{#each post in controller}}
+
+    {{post-block post=post authenticatedUser=session.user}}
+
+  {{/each}}
 </div>
 
 

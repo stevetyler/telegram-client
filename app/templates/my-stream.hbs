@@ -34,7 +34,7 @@
 
 	{{#each post in controller}}
 
-    {{post-block post=post}}
+    {{post-block post=post authenticatedUser=session.user}}
 
 	<!-- <section class="post clearfix">
 		<div style="">

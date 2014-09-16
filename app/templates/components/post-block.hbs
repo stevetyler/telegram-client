@@ -10,7 +10,7 @@
 
       <ul>
         <li>{{post.displayDate}}</li>
-        {{#if authenticatedUser}}
+        {{#if belongsToAuthenticatedUser}}
         <li><span>.</span></li>
         <li {{action 'delete' post}}><a>delete</a></li>
         {{/if}}
