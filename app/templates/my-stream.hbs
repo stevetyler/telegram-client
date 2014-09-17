@@ -15,8 +15,8 @@
 <div id="page-container" class="username" style="text-align: center; margin-top: -65px; background: none;">
 	<section class="logo-sml" style="padding-top: 10px;">
 		<img src="../assets/img/tg-logo-sml.png">
-        <h1 class="visuallyhidden">Telegram</h1>
-   	</section>
+    <h1 class="visuallyhidden">Telegram</h1>
+  </section>
 	<section>
 		<form class="clearfix "style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "publish" on="submit"}}>
 			{{textarea placeholder='Create post ...' value=newPost cols='45' rows='3'}}
@@ -36,20 +36,7 @@
 
     {{post-block post=post authenticatedUser=session.user}}
 
-	<!-- <section class="post clearfix">
-		<div style="">
-			{{#link-to 'user.posts' post.user}}<img {{bind-attr src=post.user.imageURL}} alt="User image">{{/link-to}}
-		</div>
-		<div class="clearfix">
-			{{#link-to 'user.posts' post.user}}<h3>{{post.user.id}}</h3>{{/link-to}}
-			<p>{{post.body}}</p>
-			<ul>
-				<li>{{post.displayDate}}</li>
-				<li><span>.</span></li>
-				<li {{action 'delete' post}}><a>delete</a></li>
-			</ul>
-		</div>
-	</section> -->
+
 	{{/each}}
 
 </div>
