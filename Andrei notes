@@ -58,11 +58,11 @@ How to create reply and render publish within post?m Components
 post template - handlebars not applying margin on p?
 
 
-2.	You should not be able to delete posts of other users than yourself, nor should you see the delete button on their posts. Define delete component
+2.	You should not be able to delete posts of other users than yourself, nor should you see the delete button on their posts. Define delete component. Done
 
 3.	Format the timestamps of each post properly. Use moment.js Done
 
-4.	When I go to URL / and I am logged in, redirect me to my stream.
+4.	When I go to URL / and I am logged in, redirect me to my stream. Done
 
 5.	The user profile pages aren’t fully implemented yet.
 
