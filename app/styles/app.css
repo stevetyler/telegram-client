@@ -68,7 +68,7 @@ body {
     font-size: 13px;
     font-size: 0.81rem;
     font-family: 'Open Sans', Lucida Sans, Helvetica, Helvetica Neue, Arial;
-    
+
 }
 
 h2 {
@@ -81,7 +81,7 @@ a {
     color: #0084B2;
 }
 
-a:link, a:visited {    
+a:link, a:visited {
     text-decoration: none;
 }
 
@@ -90,9 +90,9 @@ a:hover, a:active, a:focus {
 }
 
 textarea {
-    border-style: none; 
-    border-color: transparent; 
-    overflow: auto;   
+    border-style: none;
+    border-color: transparent;
+    overflow: auto;
 
 }
 
@@ -109,7 +109,7 @@ textarea {
     width: 900px;
     height: 400px;
     margin: 130px auto 130px auto;
-    background-color: white; 
+    background-color: white;
 }
 
 .front-card {
@@ -143,7 +143,7 @@ textarea {
 }
 
 .logo-sml {
-    
+
     width: 105px;
     height: 35px;
     margin: 0 auto;
@@ -176,15 +176,15 @@ textarea {
     color: black;
 }
 
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
     color: black;
 }
 
 .username input, .password input {
     width: 100%;
     height: 25px;
-    border: none; 
-    border-bottom: 1px solid #eeeeee;   
+    border: none;
+    border-bottom: 1px solid #eeeeee;
     margin: 5px 0;
 }
 
@@ -202,10 +202,24 @@ button {
     border: 1px solid #0084B2;
     background-color: white;
     font-weight: bold;
+    font-size: 0.85rem;
     color: #0084B2;
     padding: 5px 10px 5px 10px;
     outline: none; /* should only change with :focus warning */
 }
+
+button:active {
+    display: inline-block;
+    float: left;
+    background-color: #0084B2;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    outline: none; /* should only change with :focus warning */
+
+}
+
 
 button.follow {
     margin: 1em;
@@ -233,8 +247,8 @@ header {
 }
 
 header div {
-    position: relative; 
-    padding: 0 24px; 
+    position: relative;
+    padding: 0 24px;
     line-height: 49px; height: 49px;
 }
 
@@ -258,65 +272,81 @@ header h4 {
 
 nav {
     position: relative;
-    box-sizing: border-box;
+    /*box-sizing: border-box;*/
     width: 100%;
     border-top: 1px solid #EEEEEE;
     border-bottom: 1px solid #EEEEEE;
+    margin-bottom: 10px;
 }
 
 nav ul {
     position: relative;
     padding: 0;
-    margin: 0 20% 0 20%;
+    margin: 0 15% 0 15%;
     float: left;
-    width: 60%;
+    /*width: 70%;*/
     height: 48px;
-    
+
 }
 
 nav ul li {
     float: left;
     font-size: 1.5em;
     color: #0084B2;
+}
+
+nav a {
+    display: block;
     padding: 0.5em 1em;
+    margin: 0 0.5em;
 }
 
-nav ul li:hover {
-    text-decoration: none;
-    border-bottom: 3px solid #0084B2;;
+nav span {
+    display: block;
+    margin: 0 0.5em;
 }
 
-nav ul li a:hover {
+nav ul li a:hover, nav span {
     text-decoration: none;
+    border-bottom: 3px solid #0084B2;
+    padding: 0.5em 1em;
 }
 
 section.post {
     border-bottom: 1px solid #EEEEEE;
 }
 
-
 .char-limit {
     color: red;
 }
 
+.create-post {
+  font-size: 1.5rem;
+  border: none;
+  padding-top: 1em;
+  margin: 0 20px;
+}
+
+
+
 section.post div {
     float: left;
     position: relative;
-    text-align:left; 
+    text-align:left;
 }
 
 section.post div:first-child {
-    padding: 1.5em 2em; 
+    padding: 1.5em 2em;
     width: 40px
 }
 
 section.post div:last-child {
     width: 496px
-} 
+}
 
 section.post img {
-    display:block; 
-    height: 45px; 
+    display:block;
+    height: 45px;
     width: 45px
 }
 
@@ -324,13 +354,13 @@ section.post ul {
     padding: 0;
 }
 
-section.post ul li {   
+section.post ul li {
     float: left;
     padding: 0 1em 1em 0;
     list-style-type: none;
 }
 
-section.post ul li span { 
+section.post ul li span {
     display: block;
     margin-top: -3px;
 }
