@@ -18,17 +18,17 @@
     <h1 class="visuallyhidden">Telegram</h1>
   </section>
 	<section>
-		<form class="clearfix "style="font-size: 1.6em; border: none; padding-top: 1em;" {{action "publish" on="submit"}}>
+		<form class="clearfix create-post" {{action "publish" on="submit"}}>
 			{{textarea placeholder='Create post ...' value=newPost cols='45' rows='3'}}
 			<div class="vcenter clearfix" style="line-height: 2em;">
-                <span style="display: inline-block; float: left; font-size: 0.75em; padding-left: 24px; vertical-align: middle;" {{bind-attr class="charLimit"}}>{{controller.characters}} characters</span>
-            	<button type="submit" class="follow" style="float: right; font-size: 0.65em; display: inline-block; vertical-align: middle; margin: 8px 0; margin-right: 24px;">Publish</button>
+                <span style="display: inline-block; float: left; font-size: 1rem; vertical-align: middle;" {{bind-attr class="charLimit"}}>{{controller.characters}} characters</span>
+            	<button type="submit" class="follow" style="float: right; display: inline-block; vertical-align: middle; margin: 8px 0; margin-right: 24px;">Publish</button>
         	</div>
 		</form>
 	</section>
-	<nav class="clearfix" style="height: 49px">
-		<ul class="center" style="float: none; display: inline-block; text-align: center; width: auto; margin: 0;">
-			<li>Latest Posts</li>
+	<nav class="clearfix">
+		<ul style="padding-left: 125px;">
+			<li><span>Latest Posts</span></li>
 		</ul>
 	</nav>
 

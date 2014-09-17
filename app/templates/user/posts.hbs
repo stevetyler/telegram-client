@@ -1,26 +1,26 @@
 <header>
-  {{#link-to 'telegram'}}
-    <div class="home">
-        <img src="../assets/img/home.png">
-        <h4>Home</h4>
-  </div>
-  {{/link-to}}
-    {{#link-to 'user.posts' user}}
+    {{#link-to 'telegram'}}
+        <div class="home">
+            <img src="../assets/img/home.png">
+            <h4>Home</h4>
+        </div>
+    {{/link-to}}
+
     <div class="user-link">
         <img {{bind-attr src=user.imageURL}} style="height: 35px; width: 35px">
-        <h4>{{session.user.name}}</h4>
-  </div>
-  {{/link-to}}
+        <h4>{{user.name}}</h4>
+    </div>
+
 </header>
 
 <div id="page-container" class="username" style="text-align: center; margin-top: -65px; background: none;">
-	<section class="logo-sml" style="padding-top: 10px;">
-    <img src="../assets/img/tg-logo-sml.png">
-    <h1 class="visuallyhidden">Telegram</h1>
-  </section>
-  <section>
+	<section class="logo-sml" style="padding: 10px 0 20px;">
+        <img src="../assets/img/tg-logo-sml.png">
+        <h1 class="visuallyhidden">Telegram</h1>
+    </section>
+    <section>
 		<div>
-			<img {{bind-attr src=imageURL}} alt="User image" style="height: 70px; width: 70px">
+			<img {{bind-attr src=user.imageURL}} alt="User image" style="height: 70px; width: 70px">
 			<!-- <img src="../assets/img/users/stevetyler.png" style="height: 70px; width: 70px"> -->
 		</div>
 
@@ -31,10 +31,15 @@
 	<section>
 		<button type="submit" class="submit follow">Follow</button>
 	</section>
-	{{partial "nav"}}
+	<nav class="clearfix">
+        <ul>
+            <li><span>Posts</span></li>
+            <li>{{#link-to 'user.following'}}Following{{/link-to}}</li>
+            <li>{{#link-to 'user.followers'}}Followers{{/link-to}}</li>
+        </ul>
+    </nav>
 
-
-	{{outlet}}
+    {{outlet}}
 
   {{#each post in controller}}
 
