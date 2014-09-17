@@ -31,19 +31,7 @@
 	<section>
 		<button type="submit" class="submit follow">Follow</button>
 	</section>
-	<nav class="clearfix">
-        <ul>
-            <li><span>Posts</span></li>
-            <li>{{#link-to 'user.following'}}Following{{/link-to}}</li>
-            <li>{{#link-to 'user.followers'}}Followers{{/link-to}}</li>
-        </ul>
-    </nav>
 
     {{outlet}}
 
-  {{#each post in controller}}
-
-    {{post-block post=post authenticatedUser=session.user}}
-
-  {{/each}}
 </div>
