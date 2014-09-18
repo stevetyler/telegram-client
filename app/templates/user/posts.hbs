@@ -1,14 +1,14 @@
 <nav class="clearfix">
-        <ul>
-            <li><span>Posts</span></li>
-            <li>{{#link-to 'user.following'}}Following{{/link-to}}</li>
-            <li>{{#link-to 'user.followers'}}Followers{{/link-to}}</li>
-        </ul>
-    </nav>
+    <ul>
+        <li><span>Posts</span></li>
+        <li>{{#link-to 'user.following'}}Following{{/link-to}}</li>
+        <li>{{#link-to 'user.followers'}}Followers{{/link-to}}</li>
+    </ul>
+</nav>
 
 
-{{#each post in posts.controller}}
+{{#each post in controller}}
 
-    {{post-block post=post authenticatedUser=session.user}}
+    {{post-block post=post}}
 
 {{/each}}
