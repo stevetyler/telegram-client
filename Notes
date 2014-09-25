@@ -38,15 +38,6 @@ if you check your javascript console
 it's trying to make a query to a remote server
 so you haven't configured the fixtureadapter
 
-and then a model for the route?
-why do you need a model for the route?
-if you use the fixture adapter then you don't need one?
-it has nothing to do with what adapter you use. the route has a model only if it needs to fetch some data to display on the screen
-on the login page theres no data to display so you don't need a model
-
-oh thanks I get that now. You're still fetching data for the username and password though, which is where I was getting confused
-yeah but you do that in the action, where you need it
-
 
 questions 10/9 :
 
@@ -58,18 +49,17 @@ How to create reply and render publish within post?m Components
 post template - handlebars not applying margin on p?
 
 
-2.	You should not be able to delete posts of other users than yourself, nor should you see the delete button on their posts. Define delete component. Done
-
-3.	Format the timestamps of each post properly. Use moment.js Done
-
-4.	When I go to URL / and I am logged in, redirect me to my stream. Done
-
-5.	The user profile pages aren’t fully implemented yet.
-
-
-
-
-
 ssh ubuntu@192.168.56.10
+
+Express server - set permission on dist folder
+
+
+
+22/9/14
+
+create new git repo for server?
+
+
+
 
 
