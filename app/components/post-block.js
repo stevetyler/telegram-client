@@ -6,7 +6,7 @@ default Ember.Component.extend({
 
   belongsToAuthenticatedUser : function() {
 
-    return this.get('post.user') === this.get('authenticatedUser')
+    return this.get('post.user') === this.get('authenticatedUser');
 
   }.property('authenticatedUser', 'post.user'),
 
