@@ -165,19 +165,19 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-    color: black;
+    color: #222222;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-    color: black;
+    color: #222222;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-    color: black;
+    color: #222222;
 }
 
 :-ms-input-placeholder {
-    color: black;
+    color: #222222;
 }
 
 .username input, .password input {
@@ -191,7 +191,7 @@ textarea {
 .vcenter {
     display: inline-block;
     width: 100%;
-    margin: 8px 0 8px;
+    margin: 20px 0 8px;
     line-height: 2;
 }
 
