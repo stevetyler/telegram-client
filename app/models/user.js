@@ -4,7 +4,8 @@ var User = DS.Model.extend({
     email: DS.attr('string'),
     name: DS.attr('string'),
     password: DS.attr('string'),
-    imageURL: DS.attr('string')
+    imageURL: DS.attr('string'),
+    operation: DS.attr('string')
 });
 
 export
