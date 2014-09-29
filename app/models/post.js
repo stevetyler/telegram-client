@@ -9,7 +9,7 @@ var Post = DS.Model.extend({
     body: DS.attr('string'),
     displayDate: function() {
         var date = this.get('createdDate');
-        var now = moment();
+        // var now = moment();
 
           // show mins / hrs if less than a day
           return moment(date).format("MMM Do");
