@@ -55,11 +55,29 @@ Express server - set permission on dist folder
 
 
 
-22/9/14
+26/9/14
 
-create new git repo for server?
+Next step is to work on the routes that create new users and new posts
 
+app.post('/api/users', function(req, res) {
 
+});
+
+When ember is requesting  you to save a user on the server you'll be able to access the sent info via req.body.user. You're going to push this user to the array. Moreover, ember will want you to send it back as a response:
+
+req.send({user: theNewUser})
+
+In order to get access to any data sent to you by ember via req.body you'll need to install and enable the body-parser middleware.
+
+https://github.com/expressjs/body-parser
+
+Following the same principles you'll have to implement the route responsible for saving new posts published by your users.
+
+app.post('/api/posts', function(req, res) {
+
+});
+
+Because the post object sent by ember doesn't have an id (only user, createdDate and body) - you'll have to create one and then push it to the posts array.
 
 
 
