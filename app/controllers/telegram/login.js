@@ -24,16 +24,13 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
                 // http://emberjs.com/api/classes/Ember.ArrayProxy.html
                 // Ember.A() === Ember.Array when prototype extensions are off
                 var ap = Ember.ArrayProxy.create({content: Ember.A(users)});
-                var user;
+                var user = ap.get('firstObject');
 
-                // check if users array is empty
-                // not working, users === [] always evaluating to false ??
-                if (users === []) {
+                if (!user) {
                     controller.set("loginFailed", true);
                     console.log("incorrect password");
                 }
                 else {
-                    user = ap.get('firstObject');
                     controller.set("isProcessing", false);
                     controller.get('session').set('user', user);
                     controller.transitionToRoute('myStream');
