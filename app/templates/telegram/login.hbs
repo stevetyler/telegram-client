@@ -1,6 +1,6 @@
 <section class="front-signin">
-    <h2>Get going ...</h2>    
-    <form class="signin" {{action "login" on="submit"}}>
+    <h2>Get going ...</h2>
+    <form class="signin" {{action "/api/login" method="post"}}>
         {{#if loginFailed}}
             <div class="alert">Invalid username or password.</div>
         {{/if}}
@@ -15,16 +15,16 @@
         </div>
         <div class="vcenter clearfix">
             <button type="submit" class="btn" {{bindAttr disabled="isProcessing"}}>Log in</button>
-            <div class="recover-signup"> 
+            <div class="recover-signup">
                 <a class="recover">
                     {{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}
                 </a>
-                <span>or</span>                
+                <span>or</span>
                 <a class="signup">
                     {{#link-to 'telegram.createAccount'}}Sign Up
                     {{/link-to}}
                 </a>
             </div>
-        </div>                            
+        </div>
     </form>
-</section>  
+</section>
