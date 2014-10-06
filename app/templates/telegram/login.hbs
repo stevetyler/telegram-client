@@ -1,6 +1,6 @@
 <section class="front-signin">
     <h2>Get going ...</h2>
-    <form class="signin" {{action "/api/login" method="post"}}>
+    <form class="signin" {{action "login" on="submit"}}>
         {{#if loginFailed}}
             <div class="alert">Invalid username or password.</div>
         {{/if}}
