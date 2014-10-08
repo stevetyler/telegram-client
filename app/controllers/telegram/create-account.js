@@ -10,7 +10,7 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
 
         create: function() {
             var controller = this;
-            var name = this.get('firstName');
+            var name = this.get('name');
             var id = this.get('id');
             var password = this.get('password');
 
