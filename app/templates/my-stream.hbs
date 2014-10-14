@@ -3,23 +3,31 @@
     <div class="home">
         <img src="../assets/img/home.png">
         <h4>Home</h4>
-	</div>
+	  </div>
 	{{/link-to}}
-    {{#link-to 'user.posts' session.user}}
-    <div class="user-link">
-        <img {{bind-attr src=session.user.imageURL}} style="height: 35px; width: 35px">
-        <h4>{{session.user.name}}</h4>
-	</div>
-	{{/link-to}}
+
+    <div class="user-links">
+        <ul>
+            {{#link-to 'user.posts' session.user}}
+            <li>
+                <img {{bind-attr src=session.user.imageURL}} style="height: 35px; width: 35px">
+            </li>
+            <li>{{session.user.name}}</li>
+            {{/link-to}}
+            {{#link-to}}
+            <li {{action "logout" on="click"}}>Log out</li>
+            {{/link-to}}
+        </ul>
+    </div>
 </header>
 <div id="page-container" class="username" style="text-align: center; margin-top: -65px; background: none;">
 	<section class="logo-sml" style="padding-top: 10px;">
 		<img src="../assets/img/tg-logo-sml.png">
     <h1 class="visuallyhidden">Telegram</h1>
-  </section>
+    </section>
 	<section>
 		<form class="clearfix create-post" {{action "publish" on="submit"}}>
-			{{textarea placeholder='Create post ...' value=newPost cols='45' rows='3'}}
+			{{textarea placeholder='Create post ...' value=newPost cols='42' rows='3'}}
 			<div class="vcenter clearfix" style="line-height: 2em;">
                 <span style="display: inline-block; float: left; font-size: 1rem; vertical-align: middle;" {{bind-attr class="charLimit"}}>{{controller.characters}} characters</span>
             	<button type="submit" class="follow" style="float: right; display: inline-block; vertical-align: middle; margin: 8px 0; margin-right: 24px;">Publish</button>
@@ -31,13 +39,10 @@
 			<li><span>Latest Posts</span></li>
 		</ul>
 	</nav>
-
 	{{#each post in controller}}
 
-    {{post-block post=post authenticatedUser=session.user}}
-
+        {{post-block post=post authenticatedUser=session.user}}
 
 	{{/each}}
-
 </div>
 
