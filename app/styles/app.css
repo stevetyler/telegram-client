@@ -260,12 +260,18 @@ header div.home {
     float: left;
 }
 
-header div.user-link {
+
+
+header ul {
+    position: relative;
     float: right;
+    list-style-type: none;
+
 }
 
-header h4 {
-    padding-left: 8px;
+header ul li {
+    float: left;
+    padding: 0 7px;
 }
 
 nav {
