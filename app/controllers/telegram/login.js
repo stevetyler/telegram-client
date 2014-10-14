@@ -33,7 +33,7 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
                 else {
                     controller.set("isProcessing", false);
                     controller.get('session').set('user', user);
-                    controller.transitionToRoute('myStream');
+                    controller.transitionToRoute('myStream');  // why not my-stream ??
                 }
             });
         }
