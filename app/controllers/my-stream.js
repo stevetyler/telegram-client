@@ -9,25 +9,31 @@ default Ember.ArrayController.extend({
 	time: moment().format("MMM Do YYYY"),
 
 	characters: function() {
-    		return 140 - this.get('newPost').length;
+            return 140 - this.get('newPost').length;
 		}.property('newPost'),
 
 	charLimit: function() {
-    		return this.get('characters') < 0;
+            return this.get('characters') < 0;
         }.property('characters'),
-	
-	actions: {		
 
+	actions: {
+        logout: function() {
+            var controller = this;
+            Ember.$.get('/api/logout', function() {
+                controller.transitionToRoute('/');  // why not 'login' ?
+                console.log('logout success');
+            });
+        },
 		publish: function() {
-			// var controller = this;
+
 			var publish = this.get('newPost');
-			var date = new Date(); 
+			var date = new Date();
 			var limit = this.get('charLimit');
 			if (publish && !limit) {
 				var newPost = this.store.createRecord('post', {
 					body: publish,
 					user: this.get('session.user'),
-					createdDate: date 
+					createdDate: date
 				});
 				newPost.save();
 				this.set('newPost', null);
@@ -35,6 +41,7 @@ default Ember.ArrayController.extend({
 				this.set('charLimit', false);
 			}
 		},
+
 		// Action has access to post parameter ie post in controller
 		delete: function(post) {
 			post.deleteRecord();
