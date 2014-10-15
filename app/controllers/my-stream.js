@@ -19,7 +19,9 @@ default Ember.ArrayController.extend({
 	actions: {
         logout: function() {
             var controller = this;
+
             Ember.$.get('/api/logout', function() {
+                controller.get('session').set('user', []);
                 controller.transitionToRoute('/');  // why not 'login' ?
                 console.log('logout success');
             });
