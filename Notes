@@ -79,5 +79,11 @@ app.post('/api/posts', function(req, res) {
 
 Because the post object sent by ember doesn't have an id (only user, createdDate and body) - you'll have to create one and then push it to the posts array.
 
+6/10/14
+
+Sublime output to console
+
+
+
 
 
