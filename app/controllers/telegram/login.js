@@ -23,8 +23,9 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
 
                 // http://emberjs.com/api/classes/Ember.ArrayProxy.html
                 // Ember.A() === Ember.Array when prototype extensions are off
-                var ap = Ember.ArrayProxy.create({content: Ember.A(users)});
-                var user = ap.get('firstObject');
+                // var ap = Ember.ArrayProxy.create({content: Ember.A(users)});
+                var user = users.get('firstObject');
+                console.log(user.name); // undefined
 
                 if (!user) {
                     controller.set("loginFailed", true);
