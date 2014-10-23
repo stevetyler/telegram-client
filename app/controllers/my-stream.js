@@ -45,10 +45,12 @@ default Ember.ArrayController.extend({
 		},
 
 		// Action has access to post parameter ie post in controller
-		delete: function(post) {
-			post.deleteRecord();
-			post.save();
-		}
+		delete: function() {
+            this.store.find('post', this.get('model').id).then(function (post) {
+                post.deleteRecord();
+                post.save();
+            });
+        }
 	}
 });
 
