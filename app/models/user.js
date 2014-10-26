@@ -5,7 +5,7 @@ var User = DS.Model.extend({
     name: DS.attr('string'),
     password: DS.attr('string'),
     imageURL: DS.attr('string'),
-    operation: DS.attr('string')
+    followed: DS.attr('boolean')
 });
 
 export
