@@ -17,8 +17,11 @@
 		<h3>{{id}}</h3>
 	</section>
 	<section>
-    <!-- if followed is true display unfollow otherwise follow -->
-		<button type="submit" class="submit follow" {{action "follow" on="submit"}}>Follow</button>
+    {{#if isFollowed}}
+    <button type="submit" {{action "unfollow" on="submit"}}>Follow</button>
+    {{else}}
+    <button type="submit" {{action "follow" on="submit"}}>Unfollow</button>
+    {{/if}}
 	</section>
 
     {{outlet}}
