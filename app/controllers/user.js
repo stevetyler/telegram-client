@@ -3,7 +3,9 @@
 import Ember from 'ember';
 
 export
-default Ember.Controller.extend({ // route has no model (not displaying data) so use Controller not ObjectController
+default Ember.ObjectController.extend({
+
+
 
 
     actions: {
@@ -12,11 +14,12 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
             var controller = this;
             var IdToFollow = this.get('id');
 
+            // queries go to api/users
             this.store.find('user', {followUserId: IdToFollow}).then(function() {
 
             });
-
-
+        },
+        unfollow: function() {
 
         }
     }
