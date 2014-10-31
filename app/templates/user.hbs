@@ -9,7 +9,6 @@
     <section>
 		<div>
 			<img {{bind-attr src=imageURL}} alt="User image" style="height: 70px; width: 70px">
-			<!-- <img src="../assets/img/users/stevetyler.png" style="height: 70px; width: 70px"> -->
 		</div>
 
 	</section>
@@ -18,9 +17,9 @@
 	</section>
 	<section>
 	    {{#if isFollowed}}
-	    <button type="submit" class="follow" {{action "unfollow" on="submit"}}>Unfollow</button>
+	    <button type="submit" class="follow" {{action "unfollow"}}>Unfollow</button>
 	    {{else}}
-	    <button type="submit" class="follow" {{action "follow" on="submit"}}>Follow</button>
+	    <button type="submit" class="follow" {{action "follow"}}>Follow</button>
 	    {{/if}}
 	</section>
 
