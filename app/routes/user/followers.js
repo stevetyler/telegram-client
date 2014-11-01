@@ -8,6 +8,6 @@ default Ember.Route.extend({
         var userId = this.modelFor('user').id;  // look up modelFor!
         console.log('followers of', userId);
 
-        return this.store.find('user', {followersOf: userId});
+        return this.store.find('user', {operation: 'followers', userId: userId});
     }
 });
