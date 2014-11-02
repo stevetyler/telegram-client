@@ -1,19 +1,19 @@
 <section class="post clearfix">
-    <div style="">
-      {{#link-to 'user.posts' post.user}}<img {{bind-attr src=post.user.imageURL}} alt="User image">{{/link-to}}
-    </div>
-    <div class="clearfix">
-      {{#link-to 'user.posts' post.user}}<h3>{{post.user.id}}</h3>{{/link-to}}
+  <div style="">
+    {{#link-to 'user.posts' post.user}}<img {{bind-attr src=post.user.imageURL}} alt="User image">{{/link-to}}
+  </div>
+  <div class="clearfix">
+    {{#link-to 'user.posts' post.user}}<h3>{{post.user.id}}</h3>{{/link-to}}
 
-      <p>{{post.body}}</p>
+    <p>{{post.body}}</p>
 
 
-      <ul>
-        <li>{{post.displayDate}}</li>
-        {{#if belongsToAuthenticatedUser}}
-        <li><span>.</span></li>
-        <li {{action 'delete' post}}><a>delete</a></li>
-        {{/if}}
-      </ul>
-    </div>
-  </section>
+    <ul>
+      <li>{{post.displayDate}}</li>
+      {{#if belongsToAuthenticatedUser}}
+      <li><span>.</span></li>
+      <li {{action 'delete' post}}><a>delete</a></li>
+      {{/if}}
+    </ul>
+  </div>
+</section>
