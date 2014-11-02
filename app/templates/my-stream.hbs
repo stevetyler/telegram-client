@@ -12,7 +12,7 @@
             <li>
                 <img {{bind-attr src=session.user.imageURL}} style="height: 35px; width: 35px">
             </li>
-            <li>{{session.user.id}}</li>
+            <li>{{session.user.name}}</li>
             {{/link-to}}
             {{#link-to}}
             <li {{action "logout" on="click"}}>Log out</li>

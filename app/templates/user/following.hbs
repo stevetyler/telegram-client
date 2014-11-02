@@ -5,3 +5,9 @@
         <li>{{#link-to 'user.followers'}}Followers{{/link-to}}</li>
     </ul>
 </nav>
+
+{{#each user in controller}}
+
+    {{user-block user=user}}
+
+{{/each}}
