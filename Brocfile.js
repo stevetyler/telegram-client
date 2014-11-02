@@ -18,5 +18,6 @@ var app = new EmberApp();
 // along with the exports of each module as its value.
 
 app.import('bower_components/moment/moment.js');
+app.import('bower_components/jquery/dist/jquery.md5.js');
 
 module.exports = app.toTree();
