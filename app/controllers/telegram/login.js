@@ -19,24 +19,23 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
                 isProcessing: true
             });
 
-            this.store.find('user', {username: username, password: password, operation: 'login'}).then(function(users) {
+            if (username && password) {
+                password = Ember.$.md5(password + username); // hash username & password
+                // console.log(password);
 
-                // http://emberjs.com/api/classes/Ember.ArrayProxy.html
-                // Ember.A() === Ember.Array when prototype extensions are off
-                // var ap = Ember.ArrayProxy.create({content: Ember.A(users)});
-                var user = users.get('firstObject');
-                console.log(user.name); // undefined
+                controller.store.find('user', {username: username, password: password, operation: 'login'}).then(function(users) {
 
-                if (!user) {
-                    controller.set("loginFailed", true);
-                    console.log("incorrect password");
-                }
-                else {
+                    var user = users.get('firstObject');
                     controller.set("isProcessing", false);
                     controller.get('session').set('user', user);
+                    controller.set('username', '');
+                    controller.set('password', '');
                     controller.transitionToRoute('myStream');  // why not my-stream ??
-                }
-            });
+                });
+            }
+            else {
+
+            }
         }
     }
 });
