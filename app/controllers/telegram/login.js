@@ -28,9 +28,10 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
                     var user = users.get('firstObject');
                     controller.set("isProcessing", false);
                     controller.get('session').set('user', user);
-                    controller.set('username', '');
-                    controller.set('password', '');
+
                     controller.transitionToRoute('myStream');  // why not my-stream ??
+                    controller.set('username', null);
+                    controller.set('password', null);
                 });
             }
             else {
