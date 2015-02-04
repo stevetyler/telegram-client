@@ -2,11 +2,12 @@ import Ember from 'ember';
 
 export
 default Ember.ArrayController.extend({
-	authenticatedUser : false,
-	newPost: '',
+
+  needs: ['application'], // for logOut action
+  authenticatedUser : false,
+  newPost: '',
   sortAscending: false,
   sortProperties: ['createdDate'],
-	// time: moment().format("MMM Do YYYY"),
 
 	characters: function() {
     return 140 - this.get('newPost').length;
@@ -17,15 +18,15 @@ default Ember.ArrayController.extend({
   }.property('characters'),
 
 	actions: {
-    logout: function() {
-        var controller = this;
+    // logout: function() {
+    //     var controller = this;
 
-        Ember.$.get('/api/logout', function() {
-          controller.get('session').set('user', []);
-          controller.transitionToRoute('/');  // why not 'login' ?
-          console.log('logout success');
-        });
-    },
+    //     Ember.$.get('/api/logout', function() {
+    //       controller.get('session').set('user', []);
+    //       controller.transitionToRoute('/');  // why not 'login' ?
+    //       console.log('logout success');
+    //     });
+    // },
 		publish: function() {
 
 			var publish = this.get('newPost');
