@@ -3,10 +3,10 @@ import Ember from 'ember';
 export
 default Ember.ArrayController.extend({
 	authenticatedUser : false,
-
 	newPost: '',
-
-	time: moment().format("MMM Do YYYY"),
+  sortAscending: false,
+  sortProperties: ['createdDate'],
+	// time: moment().format("MMM Do YYYY"),
 
 	characters: function() {
     return 140 - this.get('newPost').length;
@@ -35,22 +35,14 @@ default Ember.ArrayController.extend({
 				var newPost = this.store.createRecord('post', {
 					body: publish,
 					user: this.get('session.user'),
-					createdDate: date
+          createdDate: date,
 				});
 				newPost.save();
 				this.set('newPost', null);
 				this.set('characters', 140);
 				this.set('charLimit', false);
 			}
-		},
-
-		// Action has access to post parameter ie post in controller
-		delete: function() {
-      this.store.find('post', this.get('model').id).then(function (post) {
-        post.deleteRecord();
-        post.save();
-      });
-    }
+		}
 	}
 });
 

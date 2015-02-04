@@ -5,15 +5,14 @@ var Post = DS.Model.extend({
     // id: DS.attr('text'),  Error: You may not set `id` as an attribute on your model ?
     title: DS.attr('string'),
     user: DS.belongsTo('user'),
-    createdDate: DS.attr('date'),
+    createdDate: DS.attr('date'), // cannot change name to 'timestamp' etc ???
     body: DS.attr('string'),
+    // cannot move computed property to controller for some reason
     displayDate: function() {
-        var date = this.get('createdDate');
-        // var now = moment();
+      var time = moment(this.get('createdDate')).fromNow();
+      return time;
+    }.property('createdDate'),
 
-          // show mins / hrs if less than a day
-          return moment(date).format("MMM Do");
-        }.property('createdDate')
 });
 
 export

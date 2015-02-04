@@ -4,8 +4,10 @@ import Ember from 'ember';
 export
 default Ember.ObjectController.extend({
 
+  // property not working
   time: function() {
-    var time = moment(this.get('timestamp')).fromNow();
+    var time = moment(this.get('createdDate')).fromNow();
+    console.log(time);
     return time;
   }.property(),
 
@@ -16,6 +18,5 @@ default Ember.ObjectController.extend({
         post.save();
       });
     }
-
   }
 });
