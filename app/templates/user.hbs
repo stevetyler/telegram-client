@@ -16,11 +16,13 @@
 		<h3>{{name}}</h3>
 	</section>
 	<section>
-	    {{#if isFollowed}}
-	    <button type="submit" class="follow" {{action "unfollow"}}>Unfollow</button>
-	    {{else}}
+	    {{#if isCurrentUser}}
+      <!-- change to follow button component instead -->
+	    {{else}}{{#if isFollowed}}
+      <button type="submit" class="follow" {{action "unfollow"}}>Unfollow</button>
+      {{else}}
 	    <button type="submit" class="follow" {{action "follow"}}>Follow</button>
-	    {{/if}}
+	    {{/if}}{{/if}}
 	</section>
 
     {{outlet}}
