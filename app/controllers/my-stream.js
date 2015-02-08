@@ -3,7 +3,7 @@ import Ember from 'ember';
 export
 default Ember.ArrayController.extend({
 
-  needs: ['application'], // for logOut action
+  // needs: ['application'], // for logOut action
   authenticatedUser : false,
   newPost: '',
   sortAscending: false,
