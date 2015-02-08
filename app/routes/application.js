@@ -13,19 +13,19 @@ export default Ember.Route.extend({
       return users;
     });
   },
-  actions: {
-    logOut: function() {
-      console.log('log out');
-      var route = this;
+  // actions: {
+  //   logOut: function() {
+  //     console.log('log out');
+  //     var route = this;
 
-      this.store.find('user', { operation: 'logout' }).then(function() {
-          console.log('logout promise returned');
-          route.store.unloadAll('post');
-          route.store.unloadAll('user');
-          route.session.set('user', null);
-          route.transitionTo('/');
-      });
-    }
-  }
+  //     this.store.find('user', { operation: 'logout' }).then(function() {
+  //         console.log('logout promise returned');
+  //         route.store.unloadAll('post');
+  //         route.store.unloadAll('user');
+  //         route.session.set('user', null);
+  //         route.transitionTo('/');
+  //     });
+  //   }
+  // }
 });
 
