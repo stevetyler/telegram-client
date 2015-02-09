@@ -2,7 +2,7 @@
     <h2>Get going ...</h2>
     <form class="signin" {{action "login" on="submit"}}>
         {{#if loginFailed}}
-            <div class="alert">Invalid username or password.</div>
+            <div class="alert">Incorrect username or password</div>
         {{/if}}
         {{#if isSlowConnection}}
             <div class="alert alert-info">The request seems to be taking more time than usual, please wait.</div>
