@@ -1,20 +1,10 @@
-Error Log
 
-21/7/14		
+login controller:
+.then(function(users, err) ?? express routes have err first ??
+I presume Mongo gives err object first, but promises second?
+How to reset form on error?
 
-rm -rf tmp gives build errors
 
-sudo rm -rf tmp
-sudo chown -R ubuntu:ubuntu .npm
-
-23/7/14
-
-jQuery not imported
-
-.jshintrc add predef '$':true
-http://stackoverflow.com/questions/24180448/import-jquery-with-ember-cli
-
-2/8/14
-
-id: DS.attr('text'),  Console Error: You may not set `id` as an attribute on your model.
-
+transitionTo:
+controller.transitionToRoute('myStream');  goes to route name
+route.transitionTo('/');  goes to path
