@@ -3,7 +3,6 @@ import Ember from 'ember';
 export
 default Ember.ArrayController.extend({
 
-  // needs: ['application'], // for logOut action
   authenticatedUser : false,
   newPost: '',
   sortAscending: false,
@@ -18,20 +17,12 @@ default Ember.ArrayController.extend({
   }.property('characters'),
 
 	actions: {
-    // logout: function() {
-    //     var controller = this;
 
-    //     Ember.$.get('/api/logout', function() {
-    //       controller.get('session').set('user', []);
-    //       controller.transitionToRoute('/');  // why not 'login' ?
-    //       console.log('logout success');
-    //     });
-    // },
 		publish: function() {
-
 			var publish = this.get('newPost');
 			var date = new Date();
 			var limit = this.get('charLimit');
+
 			if (publish && !limit) {
 				var newPost = this.store.createRecord('post', {
 					body: publish,
