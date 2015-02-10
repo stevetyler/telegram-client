@@ -7,18 +7,20 @@ default Ember.ArrayController.extend({
   newPost: '',
   sortAscending: false,
   sortProperties: ['createdDate'],
+  maxLength: 140,
 
-	characters: function() {
-    return 140 - this.get('newPost').length;
-	}.property('newPost'),
+	charCount: function() {
+    return this.get('maxLength') - this.get('newPost').length;
+	}.property('newPost', 'maxLength'),
 
 	charLimit: function() {
-    return this.get('characters') < 0;
-  }.property('characters'),
+    return this.get('charCount') < 0;
+  }.property('charCount'),
 
 	actions: {
 
 		publish: function() {
+      var controller = this;
 			var publish = this.get('newPost');
 			var date = new Date();
 			var limit = this.get('charLimit');
@@ -29,11 +31,10 @@ default Ember.ArrayController.extend({
 					user: this.get('session.user'),
           createdDate: date,
 				});
-				newPost.save();
-				this.set('newPost', null);
-				this.set('characters', 140);
-				this.set('charLimit', false);
-			}
+				newPost.save().then(function() {
+          controller.set('newPost', '');
+        });
+  		}
 		}
 	}
 });
