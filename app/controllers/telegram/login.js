@@ -22,12 +22,9 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
       if (username && password) {
         password = Ember.$.md5(password + username); // hash username & password
 
-        controller.store.find('user', {username: username, password: password, operation: 'login'}).then(function(users, err) {
-
-          if (err) {
-            controller.set('loginFailed', true); // has worked but not aymore?
-            // console.log(controller.get('loginFailed'));
-          }
+        controller.store.find('user', {username: username, password: password, operation: 'login'}).then(function(users) {
+          // need to handle error for incorrect user or password
+          // http://stackoverflow.com/questions/23605091/unable-to-catch-404-error-resource-not-found-in-ember-js-setupcontroller-hook
 
           var user = users.get('firstObject'); // lookup
           // controller.set('isProcessing', false);
@@ -35,6 +32,8 @@ default Ember.Controller.extend({ // route has no model (not displaying data) so
           controller.transitionToRoute('myStream');
           controller.set('username', null);
           controller.set('password', null);
+        }, function() {
+          controller.set('loginFailed', true);
         });
       }
       else {
