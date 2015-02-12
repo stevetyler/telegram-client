@@ -1,9 +1,6 @@
 <section class="front-signin">
     <h2>Get going ...</h2>
     <form class="signin" {{action "login" on="submit"}}>
-        {{#if loginFailed}}
-            <div class="alert">Incorrect username or password</div>
-        {{/if}}
         {{#if isSlowConnection}}
             <div class="alert alert-info">The request seems to be taking more time than usual, please wait.</div>
         {{/if}}
@@ -13,6 +10,9 @@
         <div class="password">
             {{input value=password type="password" placeholder="Enter your password ..."}}
         </div>
+        {{#if loginFailed}}
+            <div class="alert">Incorrect username or password</div>
+        {{/if}}
         <div class="vcenter clearfix">
             <button type="submit" class="btn">Log in</button>
             <div class="recover-signup">
