@@ -27,9 +27,7 @@
     "ember-cli-inject-live-reload": "^1.0.2",
     "ember-cli-qunit": "0.1.0",
     "express": "^4.8.5",
-    "glob": "^4.0.5"
+    "glob": "^4.0.5",
+    "ember-cli-auto-register-helpers": "0.0.3"
   }
 }
-
-
-
