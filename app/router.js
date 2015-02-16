@@ -28,9 +28,6 @@ Router.map(function() {
         this.route('following');
         this.route('followers'); // private
     });
-    this.route('post', {
-        path: '/:user_id/posts/:post'
-    });
     this.route('myStream', {
         path: '/my-stream' // private
     });
