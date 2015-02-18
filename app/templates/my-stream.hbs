@@ -1,28 +1,23 @@
 {{partial "header"}}
 
-<div id="page-container" class="username" style="text-align: center; margin-top: -65px; background: none;">
-	<section class="logo-sml" style="padding-top: 10px;">
-		<img src="../assets/img/tg-logo-sml.png">
-    <h1 class="visuallyhidden">Telegram</h1>
-    </section>
-	<section>
-		<form class="clearfix create-post" {{action "publish" on="submit"}}>
-			{{textarea placeholder='Create post ...' value=newPost cols='45' rows='3'}}
-			<div class="vcenter clearfix" style="line-height: 2em;">
-                <span style="display: inline-block; float: left; font-size: 1rem; vertical-align: middle;" {{bind-attr class="charLimit"}}>{{controller.charCount}} characters</span>
-            	<button type="submit" class="follow" style="float: right; display: inline-block; vertical-align: middle; margin: 8px 0; margin-right: 24px;">Publish</button>
-        	</div>
-		</form>
+<div class="page-container">
+	<form class="create-post clearfix" {{action "publish" on="submit"}}>
+	 {{textarea placeholder='Create post ...' value=newPost cols='45' rows='3'}}
+		<div class="clearfix">
+      <span style="" {{bind-attr class="charLimit"}}>{{controller.charCount}} characters</span>
+      <button type="submit">Publish</button>
+    </div>
+	</form>
 	</section>
-	<nav class="clearfix">
-		<ul style="padding-left: 125px;">
+	<nav class="latest clearfix">
+		<ul>
 			<li><span>Latest Posts</span></li>
 		</ul>
 	</nav>
 	{{#each post in controller}}
 
-        {{post-block post=post authenticatedUser=session.user}}
+    {{post-block post=post authenticatedUser=session.user}}
 
-	{{/each}}
+  {{/each}}
 </div>
 
