@@ -13,18 +13,18 @@
     {{#if loginFailed}}
         <div class="alert">Incorrect username or password</div>
     {{/if}}
-    <div class="login clearfix">
-    <button type="submit" class="btn">Log in</button>
-    <div class="recover-signup">
-        <a class="recover">
-            {{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}
-        </a>
-        <span>or</span>
-        <a class="signup">
-            {{#link-to 'telegram.createAccount'}}Sign Up
-            {{/link-to}}
-        </a>
+    <div class="submit clearfix">
+        <button type="submit">Log in</button>
+        <div class="recover-signup">
+            <a class="recover">
+                {{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}
+            </a>
+            <span>or</span>
+            <a class="signup">
+                {{#link-to 'telegram.createAccount'}}Sign Up
+                {{/link-to}}
+            </a>
+        </div>
     </div>
-  </div>
   </form>
 </section>
