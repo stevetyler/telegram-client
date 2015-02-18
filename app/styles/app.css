@@ -75,15 +75,14 @@ textarea {
 body {
     /* IE9+10 do not support rem units in font shorthand property fixed in IE11*/
     font-size: 13px;
-    font-size: 0.81rem;
+    font-size: 0.8rem;
     font-family: 'Open Sans', Lucida Sans, Helvetica, Helvetica Neue, Arial;
 
 }
 
 h2 {
-    font-size: 22px;
     font-size: 1.4rem;
-    margin-bottom: 5px;
+/*    margin-bottom: 5px;*/
 }
 
 h3 {
@@ -125,6 +124,7 @@ textarea {
 }
 
 .front-card {
+    position: relative;
     overflow: auto;
 }
 
@@ -159,10 +159,10 @@ textarea {
 .front-signin {
     position: relative;
     float: right;
-    margin: 135px 55px 0 70px;
+    margin: 120px 55px 0 70px;
     width: 449px; /* border-box */
     width: 324px; /* content-box */
-    height: 200px;
+    height: 210px;
 }
 
 input {
