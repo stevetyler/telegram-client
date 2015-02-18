@@ -1,16 +1,21 @@
-<header>
-  {{#link-to 'telegram'}}
+<header class="clearfix">
     <div class="home">
-        <img src="../assets/img/home.png">
-        <h4>Home</h4>
+        <ul>
+          {{#link-to 'myStream'}}
+          <li><img src="../assets/img/home.png"></li>
+          <li>Home</li>
+          {{/link-to}}
+        </ul>
     </div>
-  {{/link-to}}
-
+    <section class="header-logo">
+      <img src="../assets/img/tg-logo-sml.png">
+      <h1 class="visuallyhidden">Telegram</h1>
+    </section>
     <div class="user-links">
         <ul>
             {{#link-to 'user.posts' session.user}}
             <li>
-                <img {{bind-attr src=session.user.imageURL}} style="height: 35px; width: 35px">
+                <img {{bind-attr src=session.user.imageURL}}>
             </li>
             <li>{{session.user.name}}</li>
             {{/link-to}}
