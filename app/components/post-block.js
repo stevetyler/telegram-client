@@ -10,6 +10,11 @@ default Ember.Component.extend({
 
   }.property('authenticatedUser', 'post.user'),
 
+  displayDate: function() {
+      var time = moment(this.get('post.createdDate')).fromNow();
+      return time;
+    }.property('post.createdDate'),
+
   actions: {
 		// Action has access to post parameter ie post in controller
 		delete: function(post) {

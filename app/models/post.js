@@ -7,12 +7,7 @@ var Post = DS.Model.extend({
     user: DS.belongsTo('user'), // author
     ownedBy: DS.belongsTo('user'), // original author
     createdDate: DS.attr('date'),
-    body: DS.attr('string'),
-    // cannot move computed property to post controller for some reason
-    displayDate: function() {
-      var time = moment(this.get('createdDate')).fromNow();
-      return time;
-    }.property('createdDate'),
+    body: DS.attr('string')
 });
 
 export
