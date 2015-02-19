@@ -18,6 +18,9 @@ You will need the following things properly installed on your computer.
 * `npm install`
 * `bower install`
 
+jQuery.MD5 plugin is needed and defined in brocfile.js but can't be installed via Bower and gives build errors. https://github.com/placemarker/jQuery-MD5
+Copy jquery.md5.js to \bower_components\jquery\dist
+
 ## Running / Development
 
 * `ember server`
