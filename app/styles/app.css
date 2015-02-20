@@ -77,7 +77,8 @@ body {
     font-size: 13px;
     font-size: 0.8rem;
     font-family: 'Open Sans', Lucida Sans, Helvetica, Helvetica Neue, Arial;
-    background-color: #c0deed;
+    background-color: #008CB8;
+    background-color: #01a0d2;
 }
 
 h2 {
@@ -92,7 +93,7 @@ h3 {
 }
 
 a {
-    color: #0084B2;
+    color: #008CB8;
 }
 
 a:link, a:visited {
@@ -116,6 +117,7 @@ textarea {
     bottom: 0;
     width: 100%;
     background-color: #008CB8;
+    background-color: #01a0d2;
 }
 
 .page-outer .page-container {
@@ -229,13 +231,15 @@ button:active {
 }
 
 .page-container {
+    z-index: 1;
     position: relative;
-    /*top: 4px;*/
+    top: 50px;
     width: 600px;
     height: auto;
     margin: 0 auto;
     background: white;
-    background-color: #c0deed;
+    background-color: #008CB8;
+    background-color: #01a0d2;
 }
 
 .page-container section .log-sml{
@@ -243,9 +247,11 @@ button:active {
 }
 
 header {
-    position: relative;
+    z-index: 5;
+    position: fixed;
     height: 65px;
     height: 50px;
+    width: 100%;
     background: url("../assets/img/header-bg.png") repeat-x;
 }
 
@@ -304,7 +310,7 @@ header ul li {
 }
 
 .user {
-    padding: 10px 0;
+    padding: 16px 0;
     display: inline-block;
     text-align: center;
     width: 100%;
@@ -317,7 +323,7 @@ header ul li {
 
 .user button {
     text-align: center;
-    margin: 10px 0 25px 0;
+    margin: 10px 0;
 }
 
 nav {
