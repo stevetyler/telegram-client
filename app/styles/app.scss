@@ -1,0 +1,402 @@
+@import "_variables";
+@import "functions/_responsive-size";
+@import "_mixins";
+@import "_normalize-mixins";
+@import "normalize";
+
+/* ==|== primary styles =====================================================
+   Author:
+   ========================================================================== */
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    /* IE9+10 do not support rem units in font shorthand property fixed in IE11*/
+    font-size: 13px;
+    font-size: 0.8rem;
+    font-family: 'Open Sans', Lucida Sans, Helvetica, Helvetica Neue, Arial;
+    background-color: #008CB8;
+    background-color: #01a0d2;
+}
+
+h2 {
+    font-size: 1.4rem;
+/*    margin-bottom: 5px;*/
+}
+
+h3 {
+    font-size: 0.9rem;
+    margin: 8px 0;
+    font-weight: normal;
+}
+
+a {
+    color: #008CB8;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+}
+
+a:hover, a:active, a:focus {
+    text-decoration: underline;
+}
+
+textarea {
+    border-style: none;
+    border-color: transparent;
+    overflow: auto;
+    margin-bottom: 16px;
+}
+
+.page-outer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #008CB8;
+    background-color: #01a0d2;
+}
+
+.page-outer .page-container {
+    width: 900px;
+    height: 400px;
+    margin: 130px auto 130px auto;
+    background-color: white;
+}
+
+.front-card {
+    position: relative;
+    overflow: auto;
+}
+
+.front-welcome {
+    float: left;
+    width: 449px;
+    height: 330px;
+    margin: 35px 0 35px;
+    border-right: 1px solid #eeeeee;
+}
+
+.logo {
+    position: absolute;
+    top: 165px;
+    left: 110px;
+    width: 240px;
+    height: 80px;
+    /* background: url("../assets/img/tg-logo.png") no-repeat; */
+}
+
+.postmark {
+    position: absolute;
+    top: 25px;
+    right: 0;
+    width: 193px;
+    height: 70px;
+    background: url("../assets/img/postmark.png") no-repeat;
+}
+
+.front-signin {
+    position: relative;
+    float: right;
+    margin: 120px 55px 0 70px;
+    width: 449px; /* border-box */
+    width: 324px; /* content-box */
+    height: 210px;
+}
+
+input {
+    width: 324px;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    margin: 5px 0;
+}
+
+::-webkit-input-placeholder {
+    color: #222222;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #222222;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #222222;
+}
+
+:-ms-input-placeholder {
+    color: #222222;
+}
+
+.submit {
+    position: absolute; /* parent needs to be relative */
+    display: inline-block;
+    bottom: 0;
+    width: 324px;
+    /*height: 30px;*/
+    /*margin: 20px 0 8px;*/
+    line-height: 2;
+}
+
+.alert {
+    color: red;
+}
+
+button {
+    display: inline-block;
+    border: 1px solid #0084B2;
+    background-color: white;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: #0084B2;
+    padding: 5px 10px 5px 10px;
+    outline: none; /* should only change with :focus warning */
+}
+
+button:active {
+    display: inline-block;
+    background-color: #0084B2;
+    font-weight: bold;
+    font-size: 0.85rem;
+    color: white;
+    padding: 5px 10px 5px 10px;
+    outline: none; /* should only change with :focus warning */
+}
+
+.recover-signup {
+    float: right;
+}
+
+header {
+    z-index: 5;
+    position: fixed;
+    height: 65px;
+    height: 50px;
+    width: 100%;
+    background: url("../assets/img/header-bg.png") repeat-x;
+}
+
+header > div {
+    line-height: 49px;
+    height: 49px;
+}
+
+header div > * {
+    display: inline-block;
+    vertical-align: middle;
+    margin : 0;
+}
+
+header .home, header .home ul {
+    float: left;
+    padding-left: 12px;
+}
+
+.header-logo {
+    position: absolute;
+    width: 105px;
+    top: 9px;
+    left: calc(50% - 52px);
+    /*margin: 0 auto;*/
+    /* background: url("../assets/img/tg-logo-sml.png") no-repeat; */
+}
+
+.header-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+header .user-links, header .user-links ul {
+    float: right;
+    padding-right: 12px;
+}
+
+header .user-links img {
+    width: 35px;
+    height: 35px;
+}
+
+header ul {
+    list-style-type: none;
+}
+
+header ul li {
+    float: left;
+    padding: 0 7px;
+}
+
+.page-container {
+    z-index: 1;
+    position: relative;
+    top: 54px;
+    width: 600px;
+    height: 450px;
+    margin: 0 auto;
+    background-color: #01a0d2;
+    background: white;
+}
+
+.page-container section .log-sml{
+    padding: 10px 0 20px;
+}
+
+.user {
+    padding: 20px 0;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    height: 165px;
+}
+
+.user img {
+    width: 70px;
+    height: 70px;
+}
+
+.user button {
+    text-align: center;
+    margin: 10px 0;
+}
+
+nav {
+    width: 100%;
+    height: 52px;
+    border-top: 4px solid #01a0d2;
+    border-bottom: 1px solid #eeeeee;
+    background-color: white;
+}
+
+.latest {
+    padding-left: 125px;
+}
+
+nav ul {
+    float: left;
+    padding: 0;
+    margin: 0 15% 0 15%;
+
+}
+
+nav ul li {
+    float: left;
+    font-size: 1.5em;
+    color: #0084B2;
+}
+
+nav a {
+    display: block;
+    padding: 0.5em 1em;
+    margin: 0 0.5em;
+}
+
+nav span {
+    display: block;
+    color: #222222;
+    margin: 0 0.5em;
+}
+
+nav ul li a:hover, nav span {
+    text-decoration: none;
+    border-bottom: 3px solid #0084B2;
+    padding: 0.5em 1em;
+}
+
+.char-limit {
+    color: red;
+}
+
+.create-post {
+  border: none;
+  font-size: 1.5rem;
+  display: inline-block;
+  /*width: 100%;*/
+  padding: 20px 20px 8px;
+  /*padding-top: 16px;*/
+  /*line-height: 2;*/
+  vertical-align: middle;
+  background-color: white;
+}
+
+.create-post div {
+  position: relative;
+  height: 45px;
+  /*width: 100%;*/
+}
+
+.create-post span {
+  display: inline-block;
+  font-size: 0.9rem;
+  /*float: left;*/
+}
+
+.create-post button {
+  position: absolute;
+  /*vertical-align: middle;*/
+  /*margin: 8px 0;*/
+  top: 8px;
+  right: 0;
+}
+
+section.post {
+    padding: 6px 0;
+    border-bottom: 1px solid #EEEEEE;
+    background-color: white;
+}
+
+section.post div {
+    float: left;
+    text-align:left;
+}
+
+section.post div:first-child {
+    padding: 14px 25px;
+    width: 40px;
+    width: 95px;
+}
+
+section.post div:last-child {
+    width: 496px
+}
+
+section.post img {
+    /*display:block;*/
+    width: 45px;
+    height: 45px;
+}
+
+section.post ul {
+    padding: 0;
+}
+
+section.post ul li {
+    float: left;
+    padding: 0 1em 1em 0;
+    list-style-type: none;
+}
+
+section.post ul li span {
+    display: block;
+    margin-top: -3px;
+}
+
+section.post p {
+    word-wrap: break-word;
+    padding-right: 40px;
+}
+
+
+
+
+@import "_grid";
+@import "padding-margin";
+@import "_media-queries";
+@import "helper";
+@import "_print";
