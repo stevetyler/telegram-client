@@ -230,22 +230,6 @@ button:active {
     float: right;
 }
 
-.page-container {
-    z-index: 1;
-    position: relative;
-    top: 50px;
-    width: 600px;
-    height: auto;
-    margin: 0 auto;
-    background: white;
-    background-color: #008CB8;
-    background-color: #01a0d2;
-}
-
-.page-container section .log-sml{
-    padding: 10px 0 20px;
-}
-
 header {
     z-index: 5;
     position: fixed;
@@ -304,16 +288,27 @@ header ul li {
     padding: 0 7px;
 }
 
-.user, .create-post {
-    margin: 4px 0;
-    background-color: white;
+.page-container {
+    z-index: 1;
+    position: relative;
+    top: 54px;
+    width: 600px;
+    height: 450px;
+    margin: 0 auto;
+    background-color: #01a0d2;
+    background: white;
+}
+
+.page-container section .log-sml{
+    padding: 10px 0 20px;
 }
 
 .user {
-    padding: 16px 0;
+    padding: 20px 0;
     display: inline-block;
     text-align: center;
     width: 100%;
+    height: 165px;
 }
 
 .user img {
@@ -328,9 +323,9 @@ header ul li {
 
 nav {
     width: 100%;
-    height: 48px;
-    border-top: 1px solid #EEEEEE;
-    border-bottom: 1px solid #EEEEEE;
+    height: 52px;
+    border-top: 4px solid #01a0d2;
+    border-bottom: 1px solid #eeeeee;
     background-color: white;
 }
 
@@ -374,8 +369,8 @@ nav ul li a:hover, nav span {
 }
 
 .create-post {
-  font-size: 1.5rem;
   border: none;
+  font-size: 1.5rem;
   display: inline-block;
   /*width: 100%;*/
   padding: 20px 20px 8px;
