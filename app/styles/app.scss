@@ -5,7 +5,7 @@
 @import "normalize";
 
 /* ==|== primary styles =====================================================
-   Author:
+   Author: Steve Tyler
    ========================================================================== */
 
 /* apply a natural box layout model to all elements, but allowing components to change */
@@ -28,7 +28,6 @@ body {
 
 h2 {
     font-size: 1.4rem;
-/*    margin-bottom: 5px;*/
 }
 
 h3 {
@@ -37,7 +36,7 @@ h3 {
     font-weight: normal;
 }
 
-a {
+a, a:link, a:visited, a:hover, a:active, a:focus {
     color: #008CB8;
 }
 
@@ -49,11 +48,20 @@ a:hover, a:active, a:focus {
     text-decoration: underline;
 }
 
+input {
+  font-size: 0.8rem;
+}
+
 textarea {
     border-style: none;
     border-color: transparent;
     overflow: auto;
     margin-bottom: 16px;
+    font-size: 1.5rem;
+}
+
+ul {
+    list-style-type: none;
 }
 
 .page-outer {
@@ -75,79 +83,83 @@ textarea {
 .front-card {
     position: relative;
     overflow: auto;
-}
 
-.front-welcome {
-    float: left;
-    width: 449px;
-    height: 330px;
-    margin: 35px 0 35px;
-    border-right: 1px solid #eeeeee;
-}
+    .front-welcome {
+        float: left;
+        width: 449px;
+        height: 330px;
+        margin: 35px 0 35px;
+        border-right: 1px solid #eeeeee;
 
-.logo {
-    position: absolute;
-    top: 165px;
-    left: 110px;
-    width: 240px;
-    height: 80px;
-    /* background: url("../assets/img/tg-logo.png") no-repeat; */
-}
+        .logo {
+            position: absolute;
+            top: 165px;
+            left: 110px;
+            width: 240px;
+            height: 80px;
+            /* background: url("../assets/img/tg-logo.png") no-repeat; */
+        }
+    }
 
-.postmark {
-    position: absolute;
-    top: 25px;
-    right: 0;
-    width: 193px;
-    height: 70px;
-    background: url("../assets/img/postmark.png") no-repeat;
-}
+    .postmark {
+        position: absolute;
+        top: 25px;
+        right: 0;
+        width: 193px;
+        height: 70px;
+        background: url("../assets/img/postmark.png") no-repeat;
+    }
 
-.front-signin {
-    position: relative;
-    float: right;
-    margin: 120px 55px 0 70px;
-    width: 449px; /* border-box */
-    width: 324px; /* content-box */
-    height: 210px;
-}
+    .front-signin {
+        position: relative;
+        float: right;
+        margin: 120px 55px 0 70px;
+        width: 449px; /* border-box */
+        width: 324px; /* content-box */
+        height: 210px;
 
-input {
-    width: 324px;
-    height: 25px;
-    border: none;
-    border-bottom: 1px solid #eeeeee;
-    margin: 5px 0;
-}
+        input {
+            width: 324px;
+            height: 25px;
+            border: none;
+            border-bottom: 1px solid #eeeeee;
+            margin: 5px 0;
+        }
 
-::-webkit-input-placeholder {
-    color: #222222;
-}
+        ::-webkit-input-placeholder {
+            color: #222222;
+        }
 
-:-moz-placeholder { /* Firefox 18- */
-    color: #222222;
-}
+        :-moz-placeholder { /* Firefox 18- */
+            color: #222222;
+        }
 
-::-moz-placeholder {  /* Firefox 19+ */
-    color: #222222;
-}
+        ::-moz-placeholder {  /* Firefox 19+ */
+            color: #222222;
+        }
 
-:-ms-input-placeholder {
-    color: #222222;
-}
+        :-ms-input-placeholder {
+            color: #222222;
+        }
 
-.submit {
-    position: absolute; /* parent needs to be relative */
-    display: inline-block;
-    bottom: 0;
-    width: 324px;
-    /*height: 30px;*/
-    /*margin: 20px 0 8px;*/
-    line-height: 2;
-}
+        .submit {
+            position: absolute; /* parent needs to be relative */
+            display: inline-block;
+            bottom: 0;
+            width: 324px;
+            /*height: 30px;*/
+            /*margin: 20px 0 8px;*/
+            line-height: 2;
+        }
 
-.alert {
-    color: red;
+        .alert {
+            color: red;
+        }
+
+        .recover-signup {
+            float: right;
+        }
+    }
 }
 
 button {
@@ -171,10 +183,6 @@ button:active {
     outline: none; /* should only change with :focus warning */
 }
 
-.recover-signup {
-    float: right;
-}
-
 header {
     z-index: 5;
     position: fixed;
@@ -182,55 +190,51 @@ header {
     height: 50px;
     width: 100%;
     background: url("../assets/img/header-bg.png") repeat-x;
-}
 
-header > div {
-    line-height: 49px;
-    height: 49px;
-}
+    div {
+        line-height: 49px;
+        height: 49px;
+    }
 
-header div > * {
-    display: inline-block;
-    vertical-align: middle;
-    margin : 0;
-}
+    div > * {
+        display: inline-block;
+        vertical-align: middle;
+        margin : 0;
+    }
 
-header .home, header .home ul {
-    float: left;
-    padding-left: 12px;
-}
+    .header-logo {
+        position: absolute;
+        width: 105px;
+        top: 9px;
+        left: calc(50% - 52px);
+        /*margin: 0 auto;*/
+        /* background: url("../assets/img/tg-logo-sml.png") no-repeat; */
+    }
 
-.header-logo {
-    position: absolute;
-    width: 105px;
-    top: 9px;
-    left: calc(50% - 52px);
-    /*margin: 0 auto;*/
-    /* background: url("../assets/img/tg-logo-sml.png") no-repeat; */
-}
+    .header-logo img {
+        width: 100%;
+        height: 100%;
+    }
 
-.header-logo img {
-    width: 100%;
-    height: 100%;
-}
+    ul li {
+        float: left;
+        padding: 0 7px;
+    }
 
-header .user-links, header .user-links ul {
-    float: right;
-    padding-right: 12px;
-}
+    .home, .home ul {
+        float: left;
+        padding-left: 12px;
+    }
 
-header .user-links img {
-    width: 35px;
-    height: 35px;
-}
+    .user-links, .user-links ul {
+        float: right;
+        padding-right: 12px;
+    }
 
-header ul {
-    list-style-type: none;
-}
-
-header ul li {
-    float: left;
-    padding: 0 7px;
+    .user-links img {
+        width: 35px;
+        height: 35px;
+    }
 }
 
 .page-container {
@@ -242,157 +246,148 @@ header ul li {
     margin: 0 auto;
     background-color: #01a0d2;
     background: white;
+
+    .user {
+        padding: 20px 0;
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        height: 165px;
+    }
+
+    .user img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .user button {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    nav {
+        width: 100%;
+        height: 52px;
+        border-top: 4px solid #01a0d2;
+        border-bottom: 1px solid #eeeeee;
+        background-color: white;
+
+        ul {
+            padding: 0;
+            margin: 0 15% 0 15%;
+        }
+
+        ul li {
+            float: left;
+            font-size: 1.5em;
+            color: #0084B2;
+        }
+
+        ul li a:hover, span {
+            text-decoration: none;
+            border-bottom: 3px solid #0084B2;
+            padding: 0.5em 1em;
+        }
+
+        a {
+            display: block;
+            padding: 0.5em 1em;
+            margin: 0 0.5em;
+        }
+
+        span {
+            display: block;
+            color: #222222;
+            margin: 0 0.5em;
+        }
+
+        .latest {
+            padding-left: 125px;
+        }
+    }
+
+    .create-post {
+        border: none;
+        font-size: 1.5rem;
+        display: inline-block;
+        /*width: 100%;*/
+        padding: 20px 20px 8px;
+        /*padding-top: 16px;*/
+        /*line-height: 2;*/
+        vertical-align: middle;
+        background-color: white;
+
+        .char-limit {
+            color: red;
+        }
+
+        div {
+            position: relative;
+            height: 45px;
+            /*width: 100%;*/
+        }
+
+        span {
+            display: inline-block;
+            font-size: 0.9rem;
+            /*float: left;*/
+        }
+
+        button {
+            position: absolute;
+            /*vertical-align: middle;*/
+            /*margin: 8px 0;*/
+            top: 8px;
+            right: 0;
+        }
+    }
+    section.post {
+        padding: 6px 0;
+        border-bottom: 1px solid #EEEEEE;
+        background-color: white;
+
+        div {
+            float: left;
+            text-align:left;
+        }
+
+        div:first-child {
+            padding: 14px 25px;
+            width: 40px;
+            width: 95px;
+        }
+
+        div:last-child {
+            width: 496px
+        }
+
+        img {
+            /*display:block;*/
+            width: 45px;
+            height: 45px;
+        }
+
+        ul {
+            padding: 0;
+        }
+
+        ul li {
+            float: left;
+            padding: 0 1em 1em 0;
+            list-style-type: none;
+        }
+
+        ul li span {
+            display: block;
+            margin-top: -3px;
+        }
+
+        p {
+            word-wrap: break-word;
+            padding-right: 40px;
+        }
+    }
 }
-
-.page-container section .log-sml{
-    padding: 10px 0 20px;
-}
-
-.user {
-    padding: 20px 0;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    height: 165px;
-}
-
-.user img {
-    width: 70px;
-    height: 70px;
-}
-
-.user button {
-    text-align: center;
-    margin: 10px 0;
-}
-
-nav {
-    width: 100%;
-    height: 52px;
-    border-top: 4px solid #01a0d2;
-    border-bottom: 1px solid #eeeeee;
-    background-color: white;
-}
-
-.latest {
-    padding-left: 125px;
-}
-
-nav ul {
-    float: left;
-    padding: 0;
-    margin: 0 15% 0 15%;
-
-}
-
-nav ul li {
-    float: left;
-    font-size: 1.5em;
-    color: #0084B2;
-}
-
-nav a {
-    display: block;
-    padding: 0.5em 1em;
-    margin: 0 0.5em;
-}
-
-nav span {
-    display: block;
-    color: #222222;
-    margin: 0 0.5em;
-}
-
-nav ul li a:hover, nav span {
-    text-decoration: none;
-    border-bottom: 3px solid #0084B2;
-    padding: 0.5em 1em;
-}
-
-.char-limit {
-    color: red;
-}
-
-.create-post {
-  border: none;
-  font-size: 1.5rem;
-  display: inline-block;
-  /*width: 100%;*/
-  padding: 20px 20px 8px;
-  /*padding-top: 16px;*/
-  /*line-height: 2;*/
-  vertical-align: middle;
-  background-color: white;
-}
-
-.create-post div {
-  position: relative;
-  height: 45px;
-  /*width: 100%;*/
-}
-
-.create-post span {
-  display: inline-block;
-  font-size: 0.9rem;
-  /*float: left;*/
-}
-
-.create-post button {
-  position: absolute;
-  /*vertical-align: middle;*/
-  /*margin: 8px 0;*/
-  top: 8px;
-  right: 0;
-}
-
-section.post {
-    padding: 6px 0;
-    border-bottom: 1px solid #EEEEEE;
-    background-color: white;
-}
-
-section.post div {
-    float: left;
-    text-align:left;
-}
-
-section.post div:first-child {
-    padding: 14px 25px;
-    width: 40px;
-    width: 95px;
-}
-
-section.post div:last-child {
-    width: 496px
-}
-
-section.post img {
-    /*display:block;*/
-    width: 45px;
-    height: 45px;
-}
-
-section.post ul {
-    padding: 0;
-}
-
-section.post ul li {
-    float: left;
-    padding: 0 1em 1em 0;
-    list-style-type: none;
-}
-
-section.post ul li span {
-    display: block;
-    margin-top: -3px;
-}
-
-section.post p {
-    word-wrap: break-word;
-    padding-right: 40px;
-}
-
-
 
 
 @import "_grid";
