@@ -8,6 +8,9 @@
    Author: Steve Tyler
    ========================================================================== */
 
+$bgColor: #01a0d2;
+$link: #01a0d2;
+
 /* apply a natural box layout model to all elements, but allowing components to change */
 /* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
@@ -22,8 +25,7 @@ body {
     font-size: 13px;
     font-size: 0.8rem;
     font-family: 'Open Sans', Lucida Sans, Helvetica, Helvetica Neue, Arial;
-    background-color: #008CB8;
-    background-color: #01a0d2;
+    background-color: $bgColor;
 }
 
 h2 {
@@ -37,7 +39,7 @@ h3 {
 }
 
 a, a:link, a:visited, a:hover, a:active, a:focus {
-    color: #008CB8;
+    color: $bgColor;
 }
 
 a:link, a:visited {
@@ -60,8 +62,28 @@ textarea {
     font-size: 1.5rem;
 }
 
-ul {
-    list-style-type: none;
+input {
+    width: 324px;
+    height: 25px;
+    border: none;
+    border-bottom: 1px solid #eeeeee;
+    margin: 5px 0;
+}
+
+::-webkit-input-placeholder {
+    color: #222222;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #222222;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #222222;
+}
+
+:-ms-input-placeholder {
+    color: #222222;
 }
 
 .page-outer {
@@ -69,15 +91,14 @@ ul {
     top: 0;
     bottom: 0;
     width: 100%;
-    background-color: #008CB8;
-    background-color: #01a0d2;
+    background-color: $bgColor;
 }
 
 .page-outer .page-container {
     width: 900px;
     height: 400px;
     margin: 130px auto 130px auto;
-    background-color: white;
+    background-color: $white;
 }
 
 .front-card {
@@ -118,29 +139,7 @@ ul {
         width: 324px; /* content-box */
         height: 210px;
 
-        input {
-            width: 324px;
-            height: 25px;
-            border: none;
-            border-bottom: 1px solid #eeeeee;
-            margin: 5px 0;
-        }
 
-        ::-webkit-input-placeholder {
-            color: #222222;
-        }
-
-        :-moz-placeholder { /* Firefox 18- */
-            color: #222222;
-        }
-
-        ::-moz-placeholder {  /* Firefox 19+ */
-            color: #222222;
-        }
-
-        :-ms-input-placeholder {
-            color: #222222;
-        }
 
         .submit {
             position: absolute; /* parent needs to be relative */
@@ -164,21 +163,21 @@ ul {
 
 button {
     display: inline-block;
-    border: 1px solid #0084B2;
-    background-color: white;
+    border: 1px solid $bgColor;
+    background-color: $white;
     font-weight: bold;
     font-size: 0.85rem;
-    color: #0084B2;
+    color: $link;
     padding: 5px 10px 5px 10px;
     outline: none; /* should only change with :focus warning */
 }
 
 button:active {
     display: inline-block;
-    background-color: #0084B2;
+    background-color: $bgColor;
     font-weight: bold;
     font-size: 0.85rem;
-    color: white;
+    color: $white;
     padding: 5px 10px 5px 10px;
     outline: none; /* should only change with :focus warning */
 }
@@ -216,6 +215,10 @@ header {
         height: 100%;
     }
 
+    ul {
+        list-style-type: none;
+    }
+
     ul li {
         float: left;
         padding: 0 7px;
@@ -242,10 +245,9 @@ header {
     position: relative;
     top: 54px;
     width: 600px;
-    height: 450px;
     margin: 0 auto;
-    background-color: #01a0d2;
-    background: white;
+    background-color: $bgColor;
+    background: $white;
 
     .user {
         padding: 20px 0;
@@ -268,24 +270,29 @@ header {
     nav {
         width: 100%;
         height: 52px;
-        border-top: 4px solid #01a0d2;
+        border-top: 4px solid $link;
         border-bottom: 1px solid #eeeeee;
-        background-color: white;
+        background-color: $white;
 
         ul {
+            float: left;
             padding: 0;
             margin: 0 15% 0 15%;
+        }
+
+        ul.latest {
+            margin-left: 215px;
         }
 
         ul li {
             float: left;
             font-size: 1.5em;
-            color: #0084B2;
+            color: $link;
         }
 
         ul li a:hover, span {
             text-decoration: none;
-            border-bottom: 3px solid #0084B2;
+            border-bottom: 3px solid $link;
             padding: 0.5em 1em;
         }
 
@@ -296,14 +303,12 @@ header {
         }
 
         span {
-            display: block;
+            float: left;
             color: #222222;
             margin: 0 0.5em;
         }
 
-        .latest {
-            padding-left: 125px;
-        }
+
     }
 
     .create-post {
@@ -315,10 +320,10 @@ header {
         /*padding-top: 16px;*/
         /*line-height: 2;*/
         vertical-align: middle;
-        background-color: white;
+        background-color: $white;
 
         .char-limit {
-            color: red;
+            color: $red;
         }
 
         div {
@@ -343,8 +348,8 @@ header {
     }
     section.post {
         padding: 6px 0;
-        border-bottom: 1px solid #EEEEEE;
-        background-color: white;
+        border-bottom: 1px solid #eeeeee;
+        background-color: $white;
 
         div {
             float: left;
