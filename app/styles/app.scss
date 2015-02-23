@@ -9,7 +9,7 @@
    ========================================================================== */
 
 $bgColor: #01a0d2;
-$link: #01a0d2;
+$link: #0396c4;
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 /* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
@@ -39,7 +39,7 @@ h3 {
 }
 
 a, a:link, a:visited, a:hover, a:active, a:focus {
-    color: $bgColor;
+    color: $link;
 }
 
 a:link, a:visited {
@@ -94,7 +94,7 @@ input {
     background-color: $bgColor;
 }
 
-.page-outer .page-container {
+.page-outer > div {
     width: 900px;
     height: 400px;
     margin: 130px auto 130px auto;
@@ -245,6 +245,7 @@ header {
     position: relative;
     top: 54px;
     width: 600px;
+    min-height: 330px;
     margin: 0 auto;
     background-color: $bgColor;
     background: $white;
@@ -325,7 +326,6 @@ header {
         .char-limit {
             color: $red;
         }
-
         div {
             position: relative;
             height: 45px;
