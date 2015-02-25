@@ -17,14 +17,6 @@ default Ember.ArrayController.extend({
     return this.get('charCount') < 0;
   }.property('charCount'),
 
-  urlify: function(text) {
-    // http://stackoverflow.com/questions/1500260/detect-urls-in-text-with-javascript
-    var urlRegex =/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
-    return text.replace(urlRegex, function(url) {
-      return new Ember.Handlebars.SafeString('<a href="' + url + '">' + url + '</a>');
-    });
-  },
-
 	actions: {
 
 		publish: function() {
@@ -34,7 +26,6 @@ default Ember.ArrayController.extend({
 			var limit = this.get('charLimit');
 
 			if (publish && !limit) {
-        // publish = this.urlify(publish);
 
         var newPost = this.store.createRecord('post', {
 					body: publish,
