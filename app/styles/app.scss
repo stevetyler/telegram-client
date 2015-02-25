@@ -8,9 +8,6 @@
    Author: Steve Tyler
    ========================================================================== */
 
-$bgColor: #01a0d2;
-$link: #0396c4;
-
 /* apply a natural box layout model to all elements, but allowing components to change */
 /* http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
 html {
@@ -39,7 +36,11 @@ h3 {
 }
 
 a, a:link, a:visited, a:hover, a:active, a:focus {
-    color: $link;
+    color: $linkColor;
+}
+
+p {
+  margin: 5px 0;
 }
 
 a:link, a:visited {
@@ -153,6 +154,7 @@ input {
 
         .alert {
             color: red;
+            margin-top: 6px;
         }
 
         .recover-signup {
@@ -167,7 +169,7 @@ button {
     background-color: $white;
     font-weight: bold;
     font-size: 0.85rem;
-    color: $link;
+    color: $linkColor;
     padding: 5px 10px 5px 10px;
     outline: none; /* should only change with :focus warning */
 }
@@ -271,7 +273,7 @@ header {
     nav {
         width: 100%;
         height: 52px;
-        border-top: 4px solid $link;
+        border-top: 4px solid $linkColor;
         border-bottom: 1px solid #eeeeee;
         background-color: $white;
 
@@ -288,12 +290,12 @@ header {
         ul li {
             float: left;
             font-size: 1.5em;
-            color: $link;
+            color: $linkColor;
         }
 
         ul li a:hover, span {
             text-decoration: none;
-            border-bottom: 3px solid $link;
+            border-bottom: 3px solid $linkColor;
             padding: 0.5em 1em;
         }
 
@@ -357,7 +359,7 @@ header {
         }
 
         div:first-child {
-            padding: 14px 25px;
+            padding: 10px 25px;
             width: 40px;
             width: 95px;
         }
