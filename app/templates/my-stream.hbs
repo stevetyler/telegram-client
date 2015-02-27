@@ -2,7 +2,7 @@
 
 <div class="page-container">
 	<form class="create-post clearfix" {{action "publish" on="submit"}}>
-	 {{textarea placeholder='Create post ...' value=newPost cols='45' rows='3'}}
+	 {{textarea placeholder='Create post ...' value=newPost rows='3'}}
 		<div class="clearfix">
       <span style="" {{bind-attr class="charLimit"}}>{{controller.charCount}} characters</span>
       <button type="submit">Publish</button>
