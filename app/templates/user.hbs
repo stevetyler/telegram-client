@@ -6,12 +6,12 @@
 		<img {{bind-attr src=imageURL}} alt="User image">
     <h3>{{name}}</h3>
     {{#if isCurrentUser}}
-      <!-- change to follow button component instead -->
-      {{else}}{{#if isFollowed}}
-      <button type="submit" {{action "unfollow"}}>Unfollow</button>
-      {{else}}
-      <button type="submit" {{action "follow"}}>Follow</button>
-      {{/if}}{{/if}}
+    <!-- change to follow button component instead -->
+    {{else}}{{#if isFollowed}}
+    <button type="submit" {{action "unfollow"}}>Unfollow</button>
+    {{else}}
+    <button type="submit" {{action "follow"}}>Follow</button>
+    {{/if}}{{/if}}
 	</section>
 
   {{outlet}}
