@@ -48,6 +48,7 @@ a:link, a:visited {
 }
 
 a:hover, a:active, a:focus {
+    color: $linkColor;
     text-decoration: underline;
 }
 
@@ -59,8 +60,8 @@ textarea {
     border-style: none;
     border-color: transparent;
     overflow: auto;
-    margin-bottom: 16px;
     font-size: 1.5rem;
+    width: 560px;
 }
 
 input {
@@ -140,8 +141,6 @@ input {
         width: 324px; /* content-box */
         height: 210px;
 
-
-
         .submit {
             position: absolute; /* parent needs to be relative */
             display: inline-block;
@@ -153,7 +152,7 @@ input {
         }
 
         .alert {
-            color: red;
+            color: $red;
             margin-top: 6px;
         }
 
@@ -253,7 +252,7 @@ header {
     background: $white;
 
     .user {
-        padding: 20px 0;
+        padding: 10px 0;
         display: inline-block;
         text-align: center;
         width: 100%;
@@ -267,13 +266,13 @@ header {
 
     .user button {
         text-align: center;
-        margin: 10px 0;
+        margin: 3px 0;
     }
 
     nav {
         width: 100%;
         height: 52px;
-        border-top: 4px solid $linkColor;
+        border-top: 4px solid $bgColor;
         border-bottom: 1px solid #eeeeee;
         background-color: $white;
 
@@ -310,8 +309,6 @@ header {
             color: #222222;
             margin: 0 0.5em;
         }
-
-
     }
 
     .create-post {
@@ -366,6 +363,14 @@ header {
 
         div:last-child {
             width: 496px
+        }
+
+        div:last-child > a:link, div:last-child > a:visited {
+            color: $black;
+        }
+
+        div:last-child > a:hover, div:last-child > a:focus {
+            color: $linkColor;
         }
 
         img {
