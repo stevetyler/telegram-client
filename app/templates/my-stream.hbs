@@ -17,7 +17,11 @@
 	{{#each post in controller}}
 
     {{post-block post=post authenticatedUser=session.user}}
-
+		{{#if repostConfirm}}
+      {{repost-confirmation yesRepost="yesRepost" noRepost="unrepost"}}
+    {{/if}}
+    {{else}}
+      <li class="empty-stream text-center"><h3>You have no posts to display</h3></li>
   {{/each}}
 </div>
 
