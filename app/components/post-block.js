@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export
 default Ember.Component.extend({
- 
+
   authenticatedUser : '',
 
   belongsToAuthenticatedUser : function() {
@@ -26,7 +26,7 @@ default Ember.Component.extend({
 
   // deletePost: function() {
   //   console.log('jquery deletePost inside of component');
-    
+
   //   // clone ??
   //   var that = this.Ember.$().clone();
   //   this.Ember.$().prev().before(that);
@@ -40,13 +40,13 @@ default Ember.Component.extend({
       console.log('repost called');
       this.set('repostConfirm', true);
     },
-    
 
 		// Action has access to post parameter ie post in controller
+    // why not this.store.find() etc.. ??
 		delete: function(post) {
 			post.deleteRecord();
 			post.save();
 		}
-  } 
+  }
 });
 

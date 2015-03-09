@@ -11,10 +11,10 @@
       <li>{{displayDate}}</li>
       {{#if belongsToAuthenticatedUser}}
         <li><span>.</span></li>
-        <li {{action 'delete'}}><a>delete</a></li>
+        <li {{action 'delete' post}}><a>delete</a></li>
       {{else}}
         <li><span>.</span></li>
-        <li {{action 'repost'}}><a>repost</a></li>
+        <li {{action 'repost' post}}><a>repost</a></li>
       {{/if}}
     </ul>
   </div>

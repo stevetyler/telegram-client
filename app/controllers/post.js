@@ -12,18 +12,19 @@ default Ember.ObjectController.extend({
     }.property('repostConfirm'),
 
 	actions: {
-    delete: function() {
-      this.store.find('post', this.get('model').id).then(function (post) {
-        post.deleteRecord();
-        post.save();
-      });
-    },
+    // delete: function() {
+    //   this.store.find('post', this.get('model').id).then(function (post) {
+    //     post.deleteRecord();
+    //     post.save();
+    //   });
+    // },
+
     repost: function() {
       if (this.get('repostConfirm')) {
-        this.set('repostConfirm', false);   
+        this.set('repostConfirm', false);
       } else {
-        this.set('repostConfirm', true);    
-      } 
+        this.set('repostConfirm', true);
+      }
     },
 
     unrepost: function() {
