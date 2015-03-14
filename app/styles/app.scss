@@ -139,17 +139,7 @@ input {
         margin: 120px 55px 0 70px;
         width: 449px; /* border-box */
         width: 324px; /* content-box */
-        height: 210px;
-
-        .submit {
-            position: absolute; /* parent needs to be relative */
-            display: inline-block;
-            bottom: 0;
-            width: 324px;
-            /*height: 30px;*/
-            /*margin: 20px 0 8px;*/
-            line-height: 2;
-        }
+        height: 235px;
 
         .alert {
             color: $red;
@@ -157,7 +147,25 @@ input {
         }
 
         .recover-signup {
-            float: right;
+            padding-top: 10px;
+        }
+
+        .submit {
+            position: absolute; /* parent needs to be relative */
+            // display: inline-block;
+            bottom: 0;
+            width: 324px;
+            /*height: 30px;*/
+            /*margin: 20px 0 8px;*/
+            line-height: 2;
+        }
+
+        .submit span {
+            padding: 0 3px;
+        }
+
+        .submit .login, .submit .recover {
+            padding-left: 15px;
         }
     }
 }

@@ -14,15 +14,18 @@
         <div class="alert">Incorrect username or password</div>
     {{/if}}
     <div class="submit clearfix">
-        <button type="submit">Log in</button>
-        <div class="recover-signup">
-            <a class="recover">
-                {{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}
-            </a>
+        <div>
+            <button type="submit">Log in</button>
             <span>or</span>
-            <a class="signup">
+            <button type="submit">Sign in with Twitter</button>
+        </div>
+        <div class="recover-signup">
+            <a>
                 {{#link-to 'telegram.createAccount'}}Sign Up
                 {{/link-to}}
+            </a>
+            <a class="recover">
+                {{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}
             </a>
         </div>
     </div>
