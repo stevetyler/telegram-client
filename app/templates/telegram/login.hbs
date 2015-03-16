@@ -2,32 +2,32 @@
   <h2>Get going ...</h2>
   <form class="signin" {{action "login" on="submit"}}>
     {{#if isSlowConnection}}
-        <div class="alert alert-info">The request seems to be taking more time than usual, please wait.</div>
+      <div class="alert alert-info">The request seems to be taking more time than usual, please wait.</div>
     {{/if}}
     <div>
-        {{input value=username type="text" placeholder="Enter your username ..."}}
+      {{input value=username type="text" placeholder="Enter your username ..."}}
     </div>
     <div>
-        {{input value=password type="password" placeholder="Enter your password ..."}}
+      {{input value=password type="password" placeholder="Enter your password ..."}}
     </div>
     {{#if loginFailed}}
-        <div class="alert">Incorrect username or password</div>
+      <div class="alert">Incorrect username or password</div>
     {{/if}}
     <div class="submit clearfix">
-        <div>
-            <button type="submit">Log in</button>
-            <span>or</span>
-            <button type="submit">Sign in with Twitter</button>
-        </div>
-        <div class="recover-signup">
-            <a>
-                {{#link-to 'telegram.createAccount'}}Sign Up
-                {{/link-to}}
-            </a>
-            <a class="recover">
-                {{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}
-            </a>
-        </div>
+      <div>
+        <button type="submit">Log in</button>
+        <span>or</span>
+        <a href="/auth/twitter">Sign in with Twitter</a>
+      </div>
+      <div class="recover-signup">
+        <a>
+          {{#link-to 'telegram.createAccount'}}Sign Up
+            {{/link-to}}
+        </a>
+        <a class="recover">
+          {{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}
+        </a>
+      </div>
     </div>
   </form>
 </section>
