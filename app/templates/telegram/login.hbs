@@ -16,18 +16,25 @@
     <div class="submit clearfix">
       <div>
         <button type="submit">Log in</button>
-        <span>or</span>
-        <a href="/api/users/auth/twitter">Sign in with Twitter</a>
       </div>
-      <div class="recover-signup">
-        <a>
+      <ul class="recover-signup clearfix">
+        <li>
+          <a href="/api/users/auth/twitter">Sign in with Twitter</a>
+        </li>
+        <li><span>.</span></li>
+        <li><a>
           {{#link-to 'telegram.createAccount'}}Sign Up
             {{/link-to}}
-        </a>
-        <a class="recover">
-          {{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}
-        </a>
-      </div>
+          </a>
+        </li>
+        <li><span>.</span></li>
+        <li>
+          <a>{{#link-to 'telegram.resetPassword'}}Reset Password{{/link-to}}
+          </a>
+        </li>
+
+
+      </ul>
     </div>
   </form>
 </section>

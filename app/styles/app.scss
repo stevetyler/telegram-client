@@ -136,18 +136,32 @@ input {
     .front-signin {
         position: relative;
         float: right;
-        margin: 100px 55px 0 70px;
+        margin: 110px 55px 0 70px;
         width: 449px; /* border-box */
         width: 324px; /* content-box */
-        height: 235px;
+        height: 255px;
 
         .alert {
             color: $red;
             margin-top: 6px;
         }
 
-        .recover-signup {
-            padding-top: 10px;
+        ul.recover-signup {
+            padding-left: 0;
+            list-style-type: none;
+        }
+
+
+        ul.recover-signup li a, ul.recover-signup span {
+            float: left;
+            // padding-right: 23px;
+        }
+
+        ul.recover-signup span {
+            display: inline-block;
+            line-height: 20px;
+            vertical-align: middle;
+            padding: 0 12px;
         }
 
         .submit {
