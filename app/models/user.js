@@ -5,7 +5,8 @@ var User = DS.Model.extend({
     name: DS.attr('string'),
     password: DS.attr('string'),
     imageURL: DS.attr('string'),
-    isFollowed: DS.attr('boolean')
+    isFollowed: DS.attr('boolean'),
+    twitterId: DS.attr('string')
 });
 
 export
