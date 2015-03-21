@@ -5,6 +5,11 @@
           <li><img src="../assets/img/home.png"></li>
           <li>Home</li>
           {{/link-to}}
+          {{#link-to}}
+          {{#if session.user.twitterId}}
+            <li {{action "importFavs" on="click"}}>Import Favourite Tweets</li>
+          {{/if}}
+          {{/link-to}}
         </ul>
     </div>
     <section class="header-logo">
