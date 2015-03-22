@@ -1,32 +1,32 @@
 <header class="clearfix">
-    <div class="home">
-        <ul>
-          {{#link-to 'myStream'}}
-          <li><img src="../assets/img/home.png"></li>
-          <li>Home</li>
-          {{/link-to}}
-          {{#link-to}}
-          {{#if session.user.twitterId}}
-            <li {{action "importFavs" on="click"}}>Import Favourite Tweets</li>
-          {{/if}}
-          {{/link-to}}
-        </ul>
-    </div>
-    <section class="header-logo">
-      <img src="../assets/img/tg-logo-sml.png">
-      <h1 class="visuallyhidden">Telegram</h1>
-    </section>
-    <div class="user-links">
-        <ul>
-            {{#link-to 'user.posts' session.user}}
-            <li>
-                <img {{bind-attr src=session.user.imageURL}}>
-            </li>
-            <li>{{session.user.name}}</li>
-            {{/link-to}}
-            {{#link-to}}
-            <li {{action "logOut" on="click"}}>Log out</li>
-            {{/link-to}}
-        </ul>
-    </div>
+  <div class="home">
+    <ul>
+      {{#link-to 'myStream'}}
+      <li><img src="../assets/img/home.png"></li>
+      <li>Home</li>
+      {{/link-to}}
+      {{#link-to}}
+      {{#if session.user.twitterId}}
+        <li {{action "importFavs" on="click"}}>Import Favourite Tweets</li>
+      {{/if}}
+      {{/link-to}}
+    </ul>
+  </div>
+  <section class="header-logo">
+    <img src="../assets/img/tg-logo-sml.png">
+    <h1 class="visuallyhidden">Telegram</h1>
+  </section>
+  <div class="user-links">
+    <ul>
+      {{#link-to 'user.posts' session.user}}
+      <li>
+        <img {{bind-attr src=session.user.imageURL}}>
+      </li>
+      <li>{{session.user.name}}</li>
+      {{/link-to}}
+      {{#link-to}}
+      <li {{action "logOut" on="click"}}>Log out</li>
+      {{/link-to}}
+    </ul>
+  </div>
 </header>
