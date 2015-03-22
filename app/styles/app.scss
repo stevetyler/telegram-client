@@ -275,6 +275,11 @@ header {
     background-color: $bgColor;
     background: $white;
 
+    .empty-stream {
+        display: block;
+        padding: 20px;
+    }
+
     .user {
         padding: 10px 0;
         display: inline-block;
