@@ -26,9 +26,8 @@ export default Ember.Route.extend({
         route.transitionTo('/');
       });
     },
-
     importFavs: function() {
-
+      return this.store.find('post', {operation: 'importFavs'});
     }
   }
 });
