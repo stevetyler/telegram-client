@@ -151,6 +151,9 @@ input {
             list-style-type: none;
         }
 
+        ul.recover-signup .fa {
+          padding-left: 4px;
+        }
 
         ul.recover-signup li a, ul.recover-signup span {
             float: left;
@@ -161,7 +164,7 @@ input {
             display: inline-block;
             line-height: 20px;
             vertical-align: middle;
-            padding: 0 12px;
+            padding: 0 11px;
         }
 
         .submit {

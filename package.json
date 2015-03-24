@@ -30,5 +30,8 @@
     "glob": "^4.0.5",
     "ember-cli-auto-register-helpers": "0.0.3",
     "ember-cli-sass": "~3.1.0-beta.5"
+  },
+  "dependencies": {
+    "ember-cli-font-awesome": "0.0.9"
   }
 }
