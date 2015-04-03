@@ -18,13 +18,7 @@ default Ember.Route.extend({
     // Takes a type and filter function, and returns a live RecordArray that remains up to date as new records are loaded into the store or created locally.
     return this.store.filter('post', { operation: 'myStream' }, function (post){
 
-      //  only returns post for logged in user and not 'isFollowed' property ??
-      // if (post.get('user').id === route.get('session.user.id')) {
-      //     return true;
-      // } else {
-      //     return post.get('user').get('isFollowed');
       return post;
-
     });
   }
 });
