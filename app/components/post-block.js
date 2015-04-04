@@ -18,35 +18,38 @@ default Ember.Component.extend({
 
   repostConfirm: false,
 
-  // not actions because of jQuery? Lookup!
+  // event handlers
+
+  deletePost: function() {
+    console.log('jquery deletePost inside of component');
+
+    // clone ??
+    var that = this.$().clone();
+    this.$().prev().before(that);
+    that.slideUp('slow', function() {
+      that.remove();
+    });
+  }.on('willDestroyElement'),
+
   // insertPost: function() {
-  //   this.Ember.$().hide().slideDown('slow');
+  //   this.$().hide().slideDown('slow');
   //   console.log('didInsertElement called');
   // }.on('didInsertElement'),
 
-  // deletePost: function() {
-  //   console.log('jquery deletePost inside of component');
-
-  //   // clone ??
-  //   var that = this.Ember.$().clone();
-  //   this.Ember.$().prev().before(that);
-  //   that.slideUp('slow', function() {
-  //     that.remove();
-  //   });
-  // }.on('willDestroyElement'),
+  repostLink: function() {
+    return this.get('repostConfirm') ? 'unRepost' : 'repost';
+  }.property('repostConfirm'),
 
   actions: {
     repost: function() {
       console.log('repost called');
       this.set('repostConfirm', true);
+      console.log(this.get('repostConfirm'));
     },
-
-		// Action has access to post parameter ie post in controller
-    // why not this.store.find() etc.. ??
-		delete: function(post) {
-			post.deleteRecord();
-			post.save();
-		}
+    delete: function(post) {
+      post.deleteRecord();
+      post.save();
+    }
   }
 });
 

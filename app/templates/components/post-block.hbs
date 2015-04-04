@@ -4,9 +4,7 @@
   </div>
   <div>
     {{#link-to 'user.posts' post.user}}<h3>{{post.user.name}}</h3>{{/link-to}}
-
     <p>{{{post-html post.body}}}</p>
-
     <ul>
       <li>{{displayDate}}</li>
       {{#if belongsToAuthenticatedUser}}
