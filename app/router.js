@@ -26,10 +26,10 @@ Router.map(function() {
   }, function() {
     this.route('posts');
     this.route('following');
-    this.route('followers'); // private
+    this.route('followers');
   });
   this.route('myStream', {
-    path: '/my-stream' // private
+    path: '/my-stream'
   });
 });
 
