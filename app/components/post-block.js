@@ -26,7 +26,7 @@ default Ember.Component.extend({
     // clone ??
     var that = this.$().clone();
     this.$().prev().before(that);
-    that.slideUp('slow', function() {
+    that.fadeOut('slow', function() {
       that.remove();
     });
   }.on('willDestroyElement'),
