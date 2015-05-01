@@ -9,5 +9,4 @@ var User = DS.Model.extend({
     twitterId: DS.attr('string')
 });
 
-export
-default User;
+export default User;
