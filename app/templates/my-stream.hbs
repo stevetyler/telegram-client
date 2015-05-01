@@ -13,12 +13,13 @@
 			<li><span>Latest Posts</span></li>
 		</ul>
 	</nav>
-	{{#each post in controller}}
-    	{{post-block post=post authenticatedUser=session.user}}
-		{{#if repostConfirm}}
-      		{{repost-confirmation yesRepost="yesRepost" noRepost="unrepost"}}
-      	{{/if}}
-      	<!-- <span class="empty-stream">You have no posts to display</span> -->
+  <!-- need to use itemController for multiple arrays -->
+	{{#each post in controller itemController="post"}}
+  	{{post-block repostConfirm=repostConfirm post=post authenticatedUser=session.user}}
+    {{#if repostConfirm}}
+      {{repost-confirmation yesRepost=repost noRepost=unRepost}}
+    {{/if}}
+      <!-- <span class="empty-stream">You have no posts to display</span> -->
 	{{/each}}
 </div>
 
