@@ -2,13 +2,13 @@
   <div class="home">
     <ul>
       {{#link-to 'myStream'}}
-      <li><img src="../assets/img/home.png"></li>
-      <li>Home</li>
+        <li><img src="../assets/img/home.png"></li>
+        <li>Home</li>
       {{/link-to}}
       {{#link-to}}
-      {{#if session.user.twitterId}}
-        <li {{action "importFavs" on="click"}}>Import Favourite Tweets</li>
-      {{/if}}
+        <li {{action "importFavs" on="click"}}>Import Favs</li>
+        {{#if session.user.twitterId}}
+        {{/if}}
       {{/link-to}}
     </ul>
   </div>
